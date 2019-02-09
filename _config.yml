@@ -50,6 +50,8 @@ ga_tracking_id: "UA-134133627-1"
 descriptions:
   - cat: Non-Tech
     desc: "All non technical posts"
+  - cat: NodeJs-project-setup
+    desc: "The series of tutorials that help to setup production-grade Nodejs API project"
 
 # Social icons and sharing options
 #
