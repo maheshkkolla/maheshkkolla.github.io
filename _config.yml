@@ -44,7 +44,7 @@ jekyll-archives:
 # disqus_shortname: bencentra
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ ga_tracking_id: "UA-134133627-1"
 
 # Category descriptions (for archive pages)
 descriptions:
@@ -67,6 +67,19 @@ descriptions:
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
 social:
+  - name: Twitter
+    icon: twitter
+    username: Mahesh Kumar Kolla
+    url: https://twitter.com/maheshkkolla
+    desc: Follow me on Twitter
+    share: true
+
+  - name: Facebook
+    icon: facebook
+    username: Mahesh Kumar Kolla
+    url: https://www.facebook.com/maheshkkolla
+    desc: Facebook
+    share: true
 
   - name: LinkedIn
     icon: linkedin
