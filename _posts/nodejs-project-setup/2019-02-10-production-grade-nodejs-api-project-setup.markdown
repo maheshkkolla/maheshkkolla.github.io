@@ -1,11 +1,10 @@
 ---
 layout: post
 title:  "Production-grade Nodejs API project setup"
-date:   2019-02-09
+date:   2019-02-10
 author: Mahesh Kumar Kolla
 categories: NodeJs-project-setup
 tags:	Tech Javascript NodeJs
-published: false
 ---
 These are series of tutorials that help to setup production-grade Nodejs API project that follows SOLID principles. 
 
