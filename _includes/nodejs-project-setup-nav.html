@@ -1,0 +1,12 @@
+<hr>
+
+{% if page.prevPost %}
+ {% assign prevPost = site.posts | where:"slug",page.prevPost %}
+ <b>Prev:</b> <a href="{{ prevPost[0].url }}">{{ prevPost[0].title }}</a>
+{% endif %}
+{% if page.nextPost %}
+ {% assign nextPost = site.posts | where:"slug",page.nextPost %}
+ <b>Next:</b> <a href="{{ nextPost[0].url }}">{{ nextPost[0].title }}</a>
+{% endif %}
+
+<hr>
