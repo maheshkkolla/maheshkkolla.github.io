@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mahesh Kumar Kolla</title>
+    <description></description>
+    <link>http://maheshkkolla.github.io/</link>
+    <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 10 Feb 2019 14:07:09 +0530</pubDate>
+    <lastBuildDate>Sun, 10 Feb 2019 14:07:09 +0530</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Production-grade Nodejs API project setup</title>
+        <description>&lt;p&gt;These are series of tutorials that help to setup production-grade Nodejs API project that follows SOLID principles.&lt;/p&gt;
+
+&lt;p&gt;The following frameworks will be used to setup the project:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot;&gt;Express JS&lt;/a&gt; - Web application framework&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.typescriptlang.org/&quot; target=&quot;_blank&quot;&gt;Typescript&lt;/a&gt; - A typed superset of Javascript&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jestjs.io/&quot; target=&quot;_blank&quot;&gt;Jest&lt;/a&gt; - Testing framework&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://inversify.io/&quot; target=&quot;_blank&quot;&gt;InversifyJS&lt;/a&gt; - IoC container&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;step-1-creating-a-basic-nodejs-api-project-with-typescriptcreating-basic-nodejs-api-project-with-typescript&quot;&gt;STEP-1: &lt;a href=&quot;creating-basic-nodejs-api-project-with-typescript&quot;&gt;Creating a basic Nodejs API project with typescript&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;step-2-structuring-the-nodejs-api-project---coming-soon&quot;&gt;STEP-2: Structuring the Nodejs API project - COMING SOON&lt;/h4&gt;
+&lt;h4 id=&quot;step-3-setup-database-and-migrations-to-nodejs-project---coming-soon&quot;&gt;STEP-3: Setup database and migrations to NodeJs project - COMING SOON&lt;/h4&gt;
+&lt;h4 id=&quot;step-4-setup-logging-linting-and-dependency-checker-to-nodejs-project---coming-soon&quot;&gt;STEP-4: Setup Logging, Linting and Dependency checker to NodeJs Project - COMING SOON&lt;/h4&gt;
+&lt;h4 id=&quot;step-4-test-setup-for-nodejs-project---coming-soon&quot;&gt;STEP-4: Test setup for NodeJs project - COMING SOON&lt;/h4&gt;
+&lt;h4 id=&quot;step-6-dependency-injection-in-nodejs-using-inversifyjs---coming-soon&quot;&gt;STEP-6: Dependency injection in NodeJs using InversifyJs - COMING SOON&lt;/h4&gt;
+&lt;h4 id=&quot;step-7-dockerising-the-nodejs-app---coming-soon&quot;&gt;STEP-7: Dockerising the NodeJs App - COMING SOON&lt;/h4&gt;
+
+</description>
+        <pubDate>Sun, 10 Feb 2019 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</guid>
+        
+        <category>Tech</category>
+        
+        <category>Javascript</category>
+        
+        <category>NodeJs</category>
+        
+        
+        <category>NodeJs-project-setup</category>
+        
+      </item>
+    
+      <item>
+        <title>Creating a basic Nodejs API project with typescript</title>
+        <description>&lt;p&gt;
+	These are series of tutorials that help to setup production-grade Nodejs API project. This is the STEP-1 of
+	&lt;b&gt;&lt;a href=&quot; /nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html&quot;&gt;Production-grade Nodejs API project setup&lt;/a&gt;&lt;/b&gt; tutorial.
+&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, We are going to setup a basic express app with typescript.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm init&lt;/code&gt; in the project directory and follow the instructions - package.json file would be created.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;package.json file contains metadata, dependencies and scripts of the project.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install express using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install express --save&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we specify &lt;code class=&quot;highlighter-rouge&quot;&gt;--save&lt;/code&gt;, the dependency will be saved in package.json&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install typescript using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install typescript @types/node --save-dev&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we specify &lt;code class=&quot;highlighter-rouge&quot;&gt;--save-dev&lt;/code&gt;, the dependency will be saved under dev dependencies which are required only for development purpose.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Configuring the typescript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When running the typescript &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc&lt;/code&gt; command, it searches for configuration file &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;. Add the following&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;w&quot;&gt; 
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;commonjs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;moduleResolution&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;node&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;pretty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;sourceMap&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;target&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;es6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;outDir&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./dist&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;src/**/*.ts&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, We are specifying various option like source, target, module etc., Read &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/tsconfig-json.html&quot;&gt;tsconfig.json&lt;/a&gt; to know about these option.&lt;/p&gt;
+
+&lt;p&gt;Now, it is time for us to create the express server&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;app.ts&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;server.ts&lt;/code&gt; files under &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; directory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt; 
+  &lt;span class=&quot;c1&quot;&gt;// app.ts&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;express&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;body-parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Above, we have done two things.
+One, We have created an get end point that responds with “Hello”. Second, We have used &lt;code class=&quot;highlighter-rouge&quot;&gt;body-parser&lt;/code&gt; middleware which extracts the body of the request stream and exposes it as json on &lt;code class=&quot;highlighter-rouge&quot;&gt;req.body&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt; 
+  &lt;span class=&quot;c1&quot;&gt;// server.ts&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./app&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Express&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;listening&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We have created the server and specified a port to listen on.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add scripts to package.json.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add following two lines under scripts in package.json.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;tsc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;node ./dist/server.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This will allow us to build and run the app.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run build&lt;/code&gt; and then &lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Check the app in browser using URL &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:3000/hello&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We need to build and start the server on evey small change of the code. It’s kinda takes off focus on development. So, let us create some tools to make this process easy&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install nodemon ts-node --save-dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nodemon helps us to restart the app automatically when any changes detected in the code.
+ts-node is for executing the typescript code without compiling it to javascript.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add one more script to package.json. &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;dev&quot;: &quot;nodemon --exec 'ts-node' ./src/server.ts&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, we can run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run dev&lt;/code&gt; to start the server in development environment instead of building and running.&lt;/p&gt;
+
+&lt;p&gt;We have a basic nodejs app up and running.
+In the next tutorial, We will be structuring the app by creating controllers, services, models etc.,&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 10 Feb 2019 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</guid>
+        
+        <category>Tech</category>
+        
+        <category>NodeJs</category>
+        
+        <category>Typescript</category>
+        
+        
+        <category>NodeJs-project-setup</category>
+        
+      </item>
+    
+      <item>
+        <title>The biggest change in my life</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/STEP&quot; target=&quot;_blank&quot;&gt;STEP&lt;/a&gt; has changed my life completely. When I was pursuing my last semester of diploma, ThoughtWorks came to my college and presented about STEP, which is a 2 year internship programme for diploma graduates. It is a work while study programme. This was the first time I ever heard about ThoughtWorks. From the presentation I also came to know that STEP sponsors a BCA from Madras University for their Interns. On successful completion of the internship, these interns are hired by ThoughtWorks at a minimum compensation of 5 Lakhs PA. Also there is no hierarchy in ThoughtWorks, no need for formal wear, you could sit any where in the office … Wow! For one second I was in Awe listening to the presentation made. But after a while I started thinking how could it all be so good? Is it all fake or could a company exist like this? All these questions started forming in my mind. Again people started suggesting different things like some said I should give it a try where as some others told I should pursue further studies. But, since I did not have the financial background for further studies, I decided to give STEP a try. The first level was an Aptitude test which I appeared for. Then I started waiting for a call from ThoughtWorks, which I did receive saying that I have been selected for the second level which was the Telephonic interview. By some miracle I did pass through that as well. Then I received a call saying that I have been selected for the final interview at ThoughtWorks Chennai office. I went there with my mom. Seeing the office atmosphere, I was flabbergasted. During the interview, we had a group discussion followed by two rounds of interviews. In my second interview, the questions were mostly on movies and politics. I started wondering and then I got a feedback after the interview that my English was not so good. Therefore I thought that I wouldn’t be selected for the internship. When I got a mail from ThoughtWorks saying that I have been selected for STEP on 25th March 2014, I was dumb struck. That was a memorable day in my life.&lt;/p&gt;
+
+&lt;p&gt;STEP internship started on 1st July 2014. This was the first time I stayed away from Home. I never thought that I would complete these 2 years successfully. But the environment in STEP, the way Vivek Haridas widely know as Swamiji (Our mentor in STEP) hand held us through out these 2 years, time just flew…, without our noticing it.&lt;/p&gt;
+
+&lt;p&gt;The 2 years of STEP have been scheduled into different semesters namely&lt;/p&gt;
+
+&lt;p&gt;8 months - Class room sessions&lt;/p&gt;
+
+&lt;p&gt;6 months - Live project experience&lt;/p&gt;
+
+&lt;p&gt;2 months - Class room sessions&lt;/p&gt;
+
+&lt;p&gt;6 months - Again Project&lt;/p&gt;
+
+&lt;p&gt;2 months - Final class room sessions&lt;/p&gt;
+
+&lt;p&gt;In the first 8 months, We learnt the basics of Programming, English, Math, Javascript, DBMS, C, Data Structures, Java. We have developed some games to learn Agile Project development, TDD and pairing. Our mentors deleted our code so many times for not a having a proper indentation, not having proper variable names or not having tests as well. That made us more focused on proper programming practices. During 3rd semester that is second set of classroom sessions, we learnt Advanced Database concepts and Networking concepts. We did really cool projects like Question paper generator, STEP management tool and English teacher. By doing these projects, we learnt regarding different roles in a project and also management of a project. In the last set of classroom sessions, We learnt about Automata and Operating System concepts. As we were all in different projects, we also shared project experiences, challenges that we faced and the learnings that we got from our projects, with each other.&lt;/p&gt;
+
+&lt;p&gt;The environment of the classroom sessions and the projects were totally different. During projects, we apply all our learnings from the classroom. I was so excited on my first project. I was assigned to a Project. But the project start date got delayed. Still, ThoughtWorkers did not let my excitement down. I got to do some tasks like integrating Mingle (TW product), &lt;a href=&quot;https://www.gocd.org/&quot; target=&quot;_blank&quot;&gt;Go CD&lt;/a&gt; (another TW Product) with &lt;a href=&quot;https://slack.com/&quot; target=&quot;_blank&quot;&gt;Slack&lt;/a&gt;. I really enjoyed those assignments.&lt;/p&gt;
+
+&lt;p&gt;STEP is not only about academics,  we had 3 outbound trainings and a structural thinking workshop. During the outbound, we do physical activities as in teams. There we were taught various things like Team work, Time management, Strategic Planning, Co-ordination etc.,&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/non-tech/outbound.png&quot; title=&quot;Some of our outbound activities&quot; /&gt;
+  &lt;figcaption&gt;Some of our outbound activities&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If STEP were to be purely academics then I could not have managed to stay till completion. We do play cricket. I did not know the ABC of Cricket. I held the bat for the first time in my life, after joining STEP. Swamiji once again being our mentor helped us learn the Game. My confidence improved a lot by playing Cricket and this impacted on my work as well. I have explored lot of board games and card games here like Monopoly, Settlers, Battleship, UNO, Cash flow, Mafia, etc., I have learnt to deal with money, people, assess people etc., by playing these games. We went for team outings for Gaming zone and movies. Language was no bar, we used to watched movies of different languages eg., Children of Heaven (Iranian), Life is beautiful, Lucia etc., As STEP interns are from different parts of India, we enjoy celebrating Birthdays, festivals etc., together. We also played pranks on each other.&lt;/p&gt;
+
+&lt;p&gt;Swamiji and Jayanth were our mentors all through the STEP internship. They never treated us as interns but behaved like our parents, treating us like their own kids. They not only taught us technical aspects pertaining to our job but also taught us how to deal with various problems of day to day life.&lt;/p&gt;
+
+&lt;p&gt;Words are not enough for me to explain my journey through STEP internship as an intern. STEP has changed me a lot. My thought process has completely changed. I have learnt how to learn. As a Diploma student, I never even dreamt of becoming an Application Developer or being a part of an MNC any time in future.&lt;/p&gt;
+
+&lt;p&gt;Thank you ThoughtWorks for providing such a great opportunity to us - diploma graduates which no other company in India has until now offered.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 Jul 2016 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
+        
+        <category>ThoughtWorks</category>
+        
+        <category>STEP</category>
+        
+        
+        <category>Non-Tech</category>
+        
+      </item>
+    
+  </channel>
+</rss>
