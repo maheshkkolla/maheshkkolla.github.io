@@ -5,8 +5,8 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Feb 2019 14:07:09 +0530</pubDate>
-    <lastBuildDate>Sun, 10 Feb 2019 14:07:09 +0530</lastBuildDate>
+    <pubDate>Sun, 10 Feb 2019 14:24:57 +0530</pubDate>
+    <lastBuildDate>Sun, 10 Feb 2019 14:24:57 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -35,14 +35,14 @@
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</guid>
         
-        <category>Tech</category>
+        <category>tech</category>
         
-        <category>Javascript</category>
+        <category>javascript</category>
         
-        <category>NodeJs</category>
+        <category>nodejs</category>
         
         
-        <category>NodeJs-project-setup</category>
+        <category>nodejs-project-setup</category>
         
       </item>
     
@@ -162,14 +162,14 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</guid>
         
-        <category>Tech</category>
+        <category>tech</category>
         
-        <category>NodeJs</category>
+        <category>nodejs</category>
         
-        <category>Typescript</category>
+        <category>typescript</category>
         
         
-        <category>NodeJs-project-setup</category>
+        <category>nodejs-project-setup</category>
         
       </item>
     
@@ -215,12 +215,12 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <link>http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
         
-        <category>ThoughtWorks</category>
+        <category>thoughtworks</category>
         
-        <category>STEP</category>
+        <category>step</category>
         
         
-        <category>Non-Tech</category>
+        <category>non-tech</category>
         
       </item>
     
