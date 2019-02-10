@@ -43,7 +43,9 @@ When running the typescript `tsc` command, it searches for configuration file `t
   }
 {% endhighlight %}
 
-Here, We are specifying various option like source, target, module etc., Read [tsconfig.json][tsconfig] to know about these option.
+Here, we are specifying typescript to compile all `.ts` files present in src and place the generated output in dist.
+Also we have specified the target js version as es6(compatible with latest nodejs versions) given module as commonjs which is used in node.
+Read [tsconfig.json][tsconfig] to know about these option. 
 
 Now, it is time for us to create the express server
 
@@ -61,8 +63,9 @@ Now, it is time for us to create the express server
   export default app;
 {% endhighlight %}
 
-Above, we have done two things.
-One, We have created an get end point that responds with "Hello". Second, We have used `body-parser` middleware which extracts the body of the request stream and exposes it as json on `req.body`. 
+Above, we did two things.
+One, We have created an get end point that responds with "Hello".
+Second, We have used `body-parser` middleware which extracts the body of the request stream and exposes it as json on `req.body`. 
 
 {% highlight typescript %} 
   // server.ts
@@ -73,7 +76,7 @@ One, We have created an get end point that responds with "Hello". Second, We hav
   });
 {% endhighlight %}
 
-We have created the server and specified a port to listen on.
+We have created the server. It listens on port 3000 if PORT environment variable is not set.  
 
 * Add scripts to package.json.
 

@@ -9,9 +9,9 @@ tags:	tech javascript nodejs
 These are series of tutorials that help to setup production-grade Nodejs API project that follows SOLID principles. 
 
 Javascript has been powering the web from a long time. Nodejs has taken javascript to another level to use it in server side development.
-Many people are moving to Nodejs because of its performance. 
+People are moving to Nodejs because of its performance. 
 In my opinion, the actual computations performance is similar to any other language like java. 
-But what makes Nodejs better is it's non-blocking io operations. This makes Nodejs perform well in web applications where the handling requests are challenging.    
+But what makes Nodejs better is it's non-blocking io operations. This makes Nodejs perform well in web applications where handling requests is the biggest challenge.    
 
 But it is still a challenge to write scalable applications in pure Nodejs. The following frameworks can help us build scalable applications.
 
