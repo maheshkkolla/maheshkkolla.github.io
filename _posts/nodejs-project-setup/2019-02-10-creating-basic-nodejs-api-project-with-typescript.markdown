@@ -3,8 +3,8 @@ layout: post
 title:  "Creating a basic Nodejs API project with typescript"
 date:   2019-02-10
 author: Mahesh Kumar Kolla
-categories: NodeJs-project-setup
-tags:	Tech NodeJs Typescript
+categories: nodejs-project-setup
+tags:	tech nodejs typescript
 step: "STEP-1" 
 prevPost: production-grade-nodejs-api-project-setup
 nextPost: creating-basic-nodejs-api-project-with-typescript

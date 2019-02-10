@@ -3,8 +3,8 @@ layout: post
 title:  "The biggest change in my life"
 date:   2016-07-11
 author: Mahesh Kumar Kolla
-categories: Non-Tech
-tags:	ThoughtWorks STEP
+categories: non-tech
+tags:	thoughtworks step
 cover:  "/assets/non-tech/group.jpg"
 ---
 
