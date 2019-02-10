@@ -5,21 +5,30 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Feb 2019 14:07:09 +0530</pubDate>
-    <lastBuildDate>Sun, 10 Feb 2019 14:07:09 +0530</lastBuildDate>
+    <pubDate>Sun, 10 Feb 2019 16:35:40 +0530</pubDate>
+    <lastBuildDate>Sun, 10 Feb 2019 16:35:40 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Production-grade Nodejs API project setup</title>
         <description>&lt;p&gt;These are series of tutorials that help to setup production-grade Nodejs API project that follows SOLID principles.&lt;/p&gt;
 
-&lt;p&gt;The following frameworks will be used to setup the project:&lt;/p&gt;
+&lt;p&gt;Javascript has been powering the web from a long time. Nodejs has taken javascript to another level to use it in server side development.
+Many people are moving to Nodejs because of its performance. 
+In my opinion, the actual computations performance is similar to any other language like java. 
+But what makes Nodejs better is it’s non-blocking io operations. This makes Nodejs perform well in web applications where the handling requests are challenging.&lt;/p&gt;
+
+&lt;p&gt;But it is still a challenge to write scalable applications in pure Nodejs. The following frameworks can help us build scalable applications.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot;&gt;Express JS&lt;/a&gt; - Web application framework&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.typescriptlang.org/&quot; target=&quot;_blank&quot;&gt;Typescript&lt;/a&gt; - A typed superset of Javascript&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jestjs.io/&quot; target=&quot;_blank&quot;&gt;Jest&lt;/a&gt; - Testing framework&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://inversify.io/&quot; target=&quot;_blank&quot;&gt;InversifyJS&lt;/a&gt; - IoC container&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot;&gt;Express JS&lt;/a&gt; - Web application framework.
+Express helps us organise and makes it easier to write web applications in js.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.typescriptlang.org/&quot; target=&quot;_blank&quot;&gt;Typescript&lt;/a&gt; - A typed superset of javascript.
+This helps us to catch the bugs well ahead and before they go into production.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jestjs.io/&quot; target=&quot;_blank&quot;&gt;Jest&lt;/a&gt; - Testing framework.
+Jest is simple and fast. It has out of the box features like mocking, code coverage, expectation/assertions etc.,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://inversify.io/&quot; target=&quot;_blank&quot;&gt;InversifyJS&lt;/a&gt; - IoC container.
+Dependency Inject is one of the SOLID principles. InversifyJs is one of the great and lightweight IoC containers for typescript.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;step-1-creating-a-basic-nodejs-api-project-with-typescriptcreating-basic-nodejs-api-project-with-typescript&quot;&gt;STEP-1: &lt;a href=&quot;creating-basic-nodejs-api-project-with-typescript&quot;&gt;Creating a basic Nodejs API project with typescript&lt;/a&gt;&lt;/h4&gt;
@@ -35,14 +44,14 @@
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</guid>
         
-        <category>Tech</category>
+        <category>tech</category>
         
-        <category>Javascript</category>
+        <category>javascript</category>
         
-        <category>NodeJs</category>
+        <category>nodejs</category>
         
         
-        <category>NodeJs-project-setup</category>
+        <category>nodejs-project-setup</category>
         
       </item>
     
@@ -162,14 +171,14 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</guid>
         
-        <category>Tech</category>
+        <category>tech</category>
         
-        <category>NodeJs</category>
+        <category>nodejs</category>
         
-        <category>Typescript</category>
+        <category>typescript</category>
         
         
-        <category>NodeJs-project-setup</category>
+        <category>nodejs-project-setup</category>
         
       </item>
     
@@ -215,12 +224,12 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <link>http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
         
-        <category>ThoughtWorks</category>
+        <category>thoughtworks</category>
         
-        <category>STEP</category>
+        <category>step</category>
         
         
-        <category>Non-Tech</category>
+        <category>non-tech</category>
         
       </item>
     
