@@ -5,18 +5,18 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Feb 2019 16:35:40 +0530</pubDate>
-    <lastBuildDate>Sun, 10 Feb 2019 16:35:40 +0530</lastBuildDate>
+    <pubDate>Sun, 10 Feb 2019 17:01:07 +0530</pubDate>
+    <lastBuildDate>Sun, 10 Feb 2019 17:01:07 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
-
+    
       <item>
         <title>Production-grade Nodejs API project setup</title>
         <description>&lt;p&gt;These are series of tutorials that help to setup production-grade Nodejs API project that follows SOLID principles.&lt;/p&gt;
 
 &lt;p&gt;Javascript has been powering the web from a long time. Nodejs has taken javascript to another level to use it in server side development.
-Many people are moving to Nodejs because of its performance.
-In my opinion, the actual computations performance is similar to any other language like java.
-But what makes Nodejs better is it’s non-blocking io operations. This makes Nodejs perform well in web applications where the handling requests are challenging.&lt;/p&gt;
+People are moving to Nodejs because of its performance. 
+In my opinion, the actual computations performance is similar to any other language like java. 
+But what makes Nodejs better is it’s non-blocking io operations. This makes Nodejs perform well in web applications where handling requests is the biggest challenge.&lt;/p&gt;
 
 &lt;p&gt;But it is still a challenge to write scalable applications in pure Nodejs. The following frameworks can help us build scalable applications.&lt;/p&gt;
 
@@ -43,18 +43,18 @@ Dependency Inject is one of the SOLID principles. InversifyJs is one of the grea
         <pubDate>Sun, 10 Feb 2019 00:00:00 +0530</pubDate>
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</guid>
-
+        
         <category>tech</category>
-
+        
         <category>javascript</category>
-
+        
         <category>nodejs</category>
-
-
+        
+        
         <category>nodejs-project-setup</category>
-
+        
       </item>
-
+    
       <item>
         <title>Creating a basic Nodejs API project with typescript</title>
         <description>&lt;p&gt;
@@ -85,7 +85,7 @@ Dependency Inject is one of the SOLID principles. InversifyJs is one of the grea
 
 &lt;p&gt;When running the typescript &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc&lt;/code&gt; command, it searches for configuration file &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;. Add the following&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;w&quot;&gt; 
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
       &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;commonjs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -100,7 +100,9 @@ Dependency Inject is one of the SOLID principles. InversifyJs is one of the grea
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Here, We are specifying various option like source, target, module etc., Read &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/tsconfig-json.html&quot;&gt;tsconfig.json&lt;/a&gt; to know about these option.&lt;/p&gt;
+&lt;p&gt;Here, we are specifying typescript to compile all &lt;code class=&quot;highlighter-rouge&quot;&gt;.ts&lt;/code&gt; files present in src and place the generated output in dist.
+Also we have specified the target js version as es6(compatible with latest nodejs versions) given module as commonjs which is used in node.
+Read &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/tsconfig-json.html&quot;&gt;tsconfig.json&lt;/a&gt; to know about these option.&lt;/p&gt;
 
 &lt;p&gt;Now, it is time for us to create the express server&lt;/p&gt;
 
@@ -108,7 +110,7 @@ Dependency Inject is one of the SOLID principles. InversifyJs is one of the grea
   &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;app.ts&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;server.ts&lt;/code&gt; files under &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; directory&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt; 
   &lt;span class=&quot;c1&quot;&gt;// app.ts&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;express&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;body-parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -119,10 +121,11 @@ Dependency Inject is one of the SOLID principles. InversifyJs is one of the grea
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Above, we have done two things.
-One, We have created an get end point that responds with “Hello”. Second, We have used &lt;code class=&quot;highlighter-rouge&quot;&gt;body-parser&lt;/code&gt; middleware which extracts the body of the request stream and exposes it as json on &lt;code class=&quot;highlighter-rouge&quot;&gt;req.body&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Above, we did two things.
+One, We have created an get end point that responds with “Hello”.
+Second, We have used &lt;code class=&quot;highlighter-rouge&quot;&gt;body-parser&lt;/code&gt; middleware which extracts the body of the request stream and exposes it as json on &lt;code class=&quot;highlighter-rouge&quot;&gt;req.body&lt;/code&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt; 
   &lt;span class=&quot;c1&quot;&gt;// server.ts&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./app&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -130,7 +133,7 @@ One, We have created an get end point that responds with “Hello”. Second, We
       &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Express&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;listening&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;We have created the server and specified a port to listen on.&lt;/p&gt;
+&lt;p&gt;We have created the server. It listens on port 3000 if PORT environment variable is not set.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Add scripts to package.json.&lt;/li&gt;
@@ -170,18 +173,18 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <pubDate>Sun, 10 Feb 2019 00:00:00 +0530</pubDate>
         <link>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/creating-basic-nodejs-api-project-with-typescript.html</guid>
-
+        
         <category>tech</category>
-
+        
         <category>nodejs</category>
-
+        
         <category>typescript</category>
-
-
+        
+        
         <category>nodejs-project-setup</category>
-
+        
       </item>
-
+    
       <item>
         <title>The biggest change in my life</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://www.thoughtworks.com/STEP&quot; target=&quot;_blank&quot;&gt;STEP&lt;/a&gt; has changed my life completely. When I was pursuing my last semester of diploma, ThoughtWorks came to my college and presented about STEP, which is a 2 year internship programme for diploma graduates. It is a work while study programme. This was the first time I ever heard about ThoughtWorks. From the presentation I also came to know that STEP sponsors a BCA from Madras University for their Interns. On successful completion of the internship, these interns are hired by ThoughtWorks at a minimum compensation of 5 Lakhs PA. Also there is no hierarchy in ThoughtWorks, no need for formal wear, you could sit any where in the office … Wow! For one second I was in Awe listening to the presentation made. But after a while I started thinking how could it all be so good? Is it all fake or could a company exist like this? All these questions started forming in my mind. Again people started suggesting different things like some said I should give it a try where as some others told I should pursue further studies. But, since I did not have the financial background for further studies, I decided to give STEP a try. The first level was an Aptitude test which I appeared for. Then I started waiting for a call from ThoughtWorks, which I did receive saying that I have been selected for the second level which was the Telephonic interview. By some miracle I did pass through that as well. Then I received a call saying that I have been selected for the final interview at ThoughtWorks Chennai office. I went there with my mom. Seeing the office atmosphere, I was flabbergasted. During the interview, we had a group discussion followed by two rounds of interviews. In my second interview, the questions were mostly on movies and politics. I started wondering and then I got a feedback after the interview that my English was not so good. Therefore I thought that I wouldn’t be selected for the internship. When I got a mail from ThoughtWorks saying that I have been selected for STEP on 25th March 2014, I was dumb struck. That was a memorable day in my life.&lt;/p&gt;
@@ -223,15 +226,15 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         <pubDate>Mon, 11 Jul 2016 00:00:00 +0530</pubDate>
         <link>http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
         <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
-
+        
         <category>thoughtworks</category>
-
+        
         <category>step</category>
-
-
+        
+        
         <category>non-tech</category>
-
+        
       </item>
-
+    
   </channel>
 </rss>

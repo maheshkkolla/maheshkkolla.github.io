@@ -162,7 +162,9 @@
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span></code></pre></figure>
 
-<p>Here, We are specifying various option like source, target, module etc., Read <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json</a> to know about these option.</p>
+<p>Here, we are specifying typescript to compile all <code class="highlighter-rouge">.ts</code> files present in src and place the generated output in dist.
+Also we have specified the target js version as es6(compatible with latest nodejs versions) given module as commonjs which is used in node.
+Read <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json</a> to know about these option.</p>
 
 <p>Now, it is time for us to create the express server</p>
 
@@ -181,8 +183,9 @@
   <span class="p">});</span>
   <span class="k">export</span> <span class="k">default</span> <span class="nx">app</span><span class="p">;</span></code></pre></figure>
 
-<p>Above, we have done two things.
-One, We have created an get end point that responds with “Hello”. Second, We have used <code class="highlighter-rouge">body-parser</code> middleware which extracts the body of the request stream and exposes it as json on <code class="highlighter-rouge">req.body</code>.</p>
+<p>Above, we did two things.
+One, We have created an get end point that responds with “Hello”.
+Second, We have used <code class="highlighter-rouge">body-parser</code> middleware which extracts the body of the request stream and exposes it as json on <code class="highlighter-rouge">req.body</code>.</p>
 
 <figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"> 
   <span class="c1">// server.ts</span>
@@ -192,7 +195,7 @@ One, We have created an get end point that responds with “Hello”. Second, We
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Express</span> <span class="nx">server</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="nx">$</span><span class="p">{</span><span class="nx">PORT</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
   <span class="p">});</span></code></pre></figure>
 
-<p>We have created the server and specified a port to listen on.</p>
+<p>We have created the server. It listens on port 3000 if PORT environment variable is not set.</p>
 
 <ul>
   <li>Add scripts to package.json.</li>
