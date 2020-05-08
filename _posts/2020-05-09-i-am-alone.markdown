@@ -5,7 +5,6 @@ date:   2020-05-09
 author: Mahesh Kumar Kolla
 categories: non-tech
 tags:	school childhood
-cover:  "/assets/non-tech/group.jpg"
 ---
 
 I am alone...
