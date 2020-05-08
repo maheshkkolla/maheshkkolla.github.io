@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://maheshkkolla.github.io/non-tech/2020/05/09/i-am-alone.html</loc>
+<lastmod>2020-05-09T00:00:00+05:30</lastmod>
+</url>
+<url>
 <loc>http://maheshkkolla.github.io/nodejs-project-setup/2019/02/10/production-grade-nodejs-api-project-setup.html</loc>
 <lastmod>2019-02-10T00:00:00+05:30</lastmod>
 </url>
