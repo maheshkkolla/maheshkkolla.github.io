@@ -8,4 +8,4 @@ permalink: /about/
 
 # Mahesh Kumar Kolla
 
-Application developer at ThoughtWorks
+Senior Consultant at ThoughtWorks
