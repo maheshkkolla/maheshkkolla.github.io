@@ -9,8 +9,8 @@
   <title>Creating a basic Nodejs API project with typescript</title>
   <meta name="description" content="	These are series of tutorials that help to setup production-grade Nodejs API project. This is the STEP-1 of	Production-grade Nodejs API project setup tutorial.">
   
-  <meta name="author" content="Ben Centra">
-  <meta name="copyright" content="&copy; Ben Centra 2020">
+  <meta name="author" content="Mahesh Kumar Kolla">
+  <meta name="copyright" content="&copy; Mahesh Kumar Kolla 2020">
   
 
   <!-- External libraries -->
@@ -81,6 +81,50 @@
           <li class="nav-link"><a href="/posts/">Posts</a>
           
         
+          
+          <li class="nav-link"><a href="/tag/thoughtworks/">thoughtworks</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/step/">step</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/tech/">tech</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/nodejs/">nodejs</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/typescript/">typescript</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/javascript/">javascript</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/school/">school</a>
+          
+        
+          
+          <li class="nav-link"><a href="/tag/childhood/">childhood</a>
+          
+        
+          
+          <li class="nav-link"><a href="/category/non-tech/">non-tech</a>
+          
+        
+          
+          <li class="nav-link"><a href="/category/nodejs-project-setup/">nodejs-project-setup</a>
+          
+        
+          
+        
+          
+        
       </ul>
     </nav>
   </div>
@@ -149,15 +193,15 @@
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> 
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"moduleResolution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"pretty"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"es6"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./dist"</span><span class="w">
+    </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"moduleResolution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"pretty"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"es6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./dist"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="s2">"src/**/*.ts"</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span></code></pre></figure>
@@ -174,12 +218,12 @@ Read <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">t
 
 <figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"> 
   <span class="c1">// app.ts</span>
-  <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">express</span> <span class="k">from</span> <span class="s2">"express"</span><span class="p">;</span>
-  <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">bodyParser</span> <span class="k">from</span> <span class="s2">"body-parser"</span><span class="p">;</span>
+  <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">express</span><span class="dl">"</span><span class="p">;</span>
+  <span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">bodyParser</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">body-parser</span><span class="dl">"</span><span class="p">;</span>
   <span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
   <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
-  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/hello'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/hello</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello</span><span class="dl">"</span><span class="p">);</span>
   <span class="p">});</span>
   <span class="k">export</span> <span class="k">default</span> <span class="nx">app</span><span class="p">;</span></code></pre></figure>
 
@@ -189,10 +233,10 @@ Second, We have used <code class="highlighter-rouge">body-parser</code> middlewa
 
 <figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"> 
   <span class="c1">// server.ts</span>
-  <span class="k">import</span> <span class="nx">app</span> <span class="k">from</span> <span class="s2">"./app"</span><span class="p">;</span>
+  <span class="k">import</span> <span class="nx">app</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./app</span><span class="dl">"</span><span class="p">;</span>
   <span class="kd">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">;</span>
   <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Express</span> <span class="nx">server</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="nx">$</span><span class="p">{</span><span class="nx">PORT</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Express server listening on port </span><span class="p">${</span><span class="nx">PORT</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
   <span class="p">});</span></code></pre></figure>
 
 <p>We have created the server. It listens on port 3000 if PORT environment variable is not set.</p>
@@ -203,8 +247,8 @@ Second, We have used <code class="highlighter-rouge">body-parser</code> middlewa
 
 <p>Add following two lines under scripts in package.json.</p>
 
-<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript">  <span class="s2">"build"</span><span class="err">:</span> <span class="s2">"tsc"</span><span class="p">,</span>
-  <span class="s2">"start"</span><span class="err">:</span> <span class="s2">"node ./dist/server.js"</span><span class="p">,</span> </code></pre></figure>
+<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript">  <span class="dl">"</span><span class="s2">build</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tsc</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">node ./dist/server.js</span><span class="dl">"</span><span class="p">,</span> </code></pre></figure>
 
 <p>This will allow us to build and run the app.</p>
 
@@ -342,6 +386,50 @@ In the next tutorial, We will be structuring the app by creating controllers, se
         
         
           <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/thoughtworks/">thoughtworks</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/step/">step</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/tech/">tech</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/nodejs/">nodejs</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/typescript/">typescript</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/javascript/">javascript</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/school/">school</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tag/childhood/">childhood</a>
+        
+        
+        
+          <li class="nav-link"><a href="/category/non-tech/">non-tech</a>
+        
+        
+        
+          <li class="nav-link"><a href="/category/nodejs-project-setup/">nodejs-project-setup</a>
+        
+        
+        
+        
         
         
       </ul>
