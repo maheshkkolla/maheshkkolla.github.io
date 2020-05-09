@@ -1,6 +1,6 @@
 # External gems
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
-gems:
+plugins:
   - jekyll-archives # Sorry, not GitHub pages friendly!
   - jekyll-sitemap
   - jekyll-paginate
@@ -12,7 +12,7 @@ exclude:
 title: Mahesh Kumar Kolla
 subtitle: "Application developer at ThoughtWorks"
 email: mahesh.mk.245@gmail.com
-name: Ben Centra
+name: Mahesh Kumar Kolla
 description: >
 
 # Base URL of site (i.e. /blog). It should always start with a slash,
