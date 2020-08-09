@@ -22,3 +22,8 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 
 
 #### STEP-1: [Install Ubuntu Server on a RaspberryPi 4](install-ububtu-server-on-a-raspberrypi)       
+
+#### STEP-2: [Install Docker and Docker Compose on a RaspberryPi running Ubuntu server](install-docker-and-docker-compose-on-ubuntu-raspberrypi)
+
+#### STEP-3: [Run NodeJS and Mongodb application on RaspberryPi](run-nodejs-mongo-application-on-rasberrypi)       
+

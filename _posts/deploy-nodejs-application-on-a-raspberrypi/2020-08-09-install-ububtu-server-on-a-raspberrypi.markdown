@@ -6,9 +6,12 @@ author: Mahesh Kumar Kolla
 categories: deploy-nodejs-application-on-a-raspberrypi
 tags:	tech raspberrypi ubuntu
 placement: 2  
+nextPost: install-docker-and-docker-compose-on-ubuntu-raspberrypi
 ---
 
 Sub post of [Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi](deploy-nodejs-and-mongodb-application-in-raspberrypi)
+
+{% include prev-next-nav.html %}
 
 Let's go through the process of installing Ubuntu 20.04, Connect to WiFi, SSH into it and Install desktop (optionally) in this post.
 

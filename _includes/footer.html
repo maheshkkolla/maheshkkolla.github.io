@@ -4,17 +4,41 @@
 
     <h3 class="footer-heading">{{ site.title }}</h3>
 
+		<div>
+		<p><strong>Site Map</strong></p>
     <div class="site-navigation">
-
-      <p><strong>Site Map</strong></p>
+			<p><h5>Pages</h5></p>
       <ul class="pages">
         {% for page in site.pages %}
-        {% if page.title and page.main_nav != false %}
-          <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% if page.title and page.main_nav != false and page.type != 'tag' and page.type != 'category' %}
+					<li class="nav-link tag-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> | </li>
         {% endif %}
         {% endfor %}
       </ul>
     </div>
+		
+		<div class="site-navigation">
+			<p><h5>Categories</h5></p>
+			<ul class="pages">
+        {% for page in site.pages %}
+        {% if page.title and page.main_nav != false and page.type == 'category' %}
+				<li class="nav-link tag-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> | </li>
+				{% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+		<div class="site-navigation">
+			<p><h5>Tags</h5></p>
+			<ul class="pages">
+        {% for page in site.pages %}
+        {% if page.title and page.main_nav != false and page.type == 'tag' %}
+					<li class="nav-link tag-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> | </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+		</div>
 
     <div class="site-contact">
 
