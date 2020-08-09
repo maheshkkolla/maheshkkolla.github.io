@@ -5,13 +5,132 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 13:53:24 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 13:53:24 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 16:19:41 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 16:19:41 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose</title>
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Prev:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html&quot;&gt;Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We are going to Dockerise the application and run it in the RaspberryPi using docker compose in this post.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;dockerising-the-application&quot;&gt;Dockerising the application&lt;/h5&gt;
+
+    &lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; from base image &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arm64v8/node&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+    &lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; arm64v8/node:latest&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /usr/src/app
+&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /usr/src/app&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . /usr/src/app&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 8080&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [ &quot;npm&quot;, &quot;start&quot; ]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;docker-compose-with-mongodb&quot;&gt;Docker compose with mongodb&lt;/h5&gt;
+
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file combining the node application and mongodb&lt;/p&gt;
+
+    &lt;p&gt;Example:&lt;/p&gt;
+    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 
+  &lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;lt;your-container-name&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;always&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;.&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8080:8080&quot;&lt;/span&gt; 
+      &lt;span class=&quot;na&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mongo&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;DB_URL=mongodb://mongo:27017&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;mongo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mongo&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mongo&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./data:/data/db&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;27017:27017&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;In the above file,&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We are building the application image from the Dockerfile we created in the first step.&lt;/li&gt;
+      &lt;li&gt;Pass any environment variables you want. Example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DB_URL&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Mounting the volume for mongo container. Host &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./data&lt;/code&gt; (Change it according to your use case) is mounted to docker’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/data/db&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Exposing ports &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8080&lt;/code&gt; (Change according to your application) for application and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;27017&lt;/code&gt; for mongo database.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;running-the-application-on-raspberrypi&quot;&gt;Running the application on RaspberryPi&lt;/h5&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;SSH into pi&lt;/li&gt;
+      &lt;li&gt;Clone your repository in a directory you want&lt;/li&gt;
+      &lt;li&gt;Go to the repository using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up -d&lt;/code&gt;&lt;/p&gt;
+
+        &lt;p&gt;This will build your application docker image and run the app and mongo db containers in detach mode.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;why-to-build-the-image-in-pi-and-why-not-on-docker-hub&quot;&gt;Why to build the image in Pi and why not on Docker Hub?&lt;/h5&gt;
+
+    &lt;p&gt;We are using arm64 nodejs image and it cannot be built in docker hub. 
+We will have to use cross-build container to do it. I have choose to build the image in Pi.
+Hence, did not explore that path.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;thats-it&quot;&gt;That’s it&lt;/h4&gt;
+
+    &lt;p&gt;Now, You have your NodeJS and MongoDB application running in RaspberryPi&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</link>
+        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</guid>
+        
+        <category>tech</category>
+        
+        <category>raspberrypi</category>
+        
+        <category>ubuntu</category>
+        
+        <category>docker</category>
+        
+        
+        <category>deploy-nodejs-application-on-a-raspberrypi</category>
+        
+      </item>
     
       <item>
         <title>Install Ububtu 20.04 Server on a Raspberry Pi 4</title>
         <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Next:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html&quot;&gt;Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;Let’s go through the process of installing Ubuntu 20.04, Connect to WiFi, SSH into it and Install desktop (optionally) in this post.&lt;/p&gt;
 
@@ -105,6 +224,75 @@
       </item>
     
       <item>
+        <title>Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</title>
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Prev:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html&quot;&gt;Install Ububtu 20.04 Server on a Raspberry Pi 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Next:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html&quot;&gt;Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this post, We will install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h5&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl -sSL https://get.docker.com | sh&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;add-permission-to-docker&quot;&gt;Add permission to docker&lt;/h5&gt;
+
+    &lt;p&gt;This will help to run docker commands without using sudo&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo usermod -aG docker pi&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Note: You need to reboot to run docker without sudo&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;install-the-dependencies-for-docker-compose&quot;&gt;Install the dependencies for docker-compose&lt;/h5&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install libffi-dev libssl-dev&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install python3 python3-pip&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;install-docker-compose&quot;&gt;Install docker compose&lt;/h5&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo pip3 install docker-compose&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;Docker compose installation takes time. If you want to see the feedback then you can run the command with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v&lt;/code&gt; (verbose mode)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;testing-docker-and-docker-compose&quot;&gt;Testing docker and docker-compose&lt;/h5&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker -v&lt;/code&gt; or you can pull a sample image and run it&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-commpose -v&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</link>
+        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</guid>
+        
+        <category>tech</category>
+        
+        <category>raspberrypi</category>
+        
+        <category>ubuntu</category>
+        
+        <category>docker</category>
+        
+        
+        <category>deploy-nodejs-application-on-a-raspberrypi</category>
+        
+      </item>
+    
+      <item>
         <title>Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi</title>
         <description>&lt;p&gt;I was excited to buy a RaspberryPi 4 to setup a small own personal server. 
 I always wanted to write tools/utils by my own and deploy it on my personal server.
@@ -118,6 +306,11 @@ You cannot even use mongo docker image latest versions (https://hub.docker.com/_
 Hence, the first thing to do it change the OS in RaspberryPi. I have decided to use Ubuntu Server. (Optionally you can install the desktop in it)&lt;/p&gt;
 
 &lt;h4 id=&quot;step-1-install-ubuntu-server-on-a-raspberrypi-4&quot;&gt;STEP-1: &lt;a href=&quot;install-ububtu-server-on-a-raspberrypi&quot;&gt;Install Ubuntu Server on a RaspberryPi 4&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;step-2-install-docker-and-docker-compose-on-a-raspberrypi-running-ubuntu-server&quot;&gt;STEP-2: &lt;a href=&quot;install-docker-and-docker-compose-on-ubuntu-raspberrypi&quot;&gt;Install Docker and Docker Compose on a RaspberryPi running Ubuntu server&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;step-3-run-nodejs-and-mongodb-application-on-raspberrypi&quot;&gt;STEP-3: &lt;a href=&quot;run-nodejs-mongo-application-on-rasberrypi&quot;&gt;Run NodeJS and Mongodb application on RaspberryPi&lt;/a&gt;&lt;/h4&gt;
+
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-in-raspberrypi.html</link>

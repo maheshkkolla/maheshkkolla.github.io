@@ -644,3 +644,6 @@ pre code.hljs {
           margin-right: 0; } }
     .site-footer .site-signature a {
       text-decoration: underline; }
+
+.tag-link {
+  display: inline; }

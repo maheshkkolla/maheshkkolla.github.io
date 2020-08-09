@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>I was alone...</title>
-  <meta name="description" content="I was alone…">
+  <title>Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</title>
+  <meta name="description" content="Sub post of Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi">
   
   <meta name="author" content="Mahesh Kumar Kolla">
   <meta name="copyright" content="&copy; Mahesh Kumar Kolla 2020">
@@ -47,7 +47,7 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/non-tech/2020/05/09/i-am-alone.html">
+  <link rel="canonical" href="http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html">
   <link rel="alternate" type="application/rss+xml" title="Mahesh Kumar Kolla" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -129,7 +129,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">I was alone...</h1>
+      <h1 class="title">Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</h1>
       <p class="info">by <strong>Mahesh Kumar Kolla</strong></p>
     </header>
   </div>
@@ -144,58 +144,73 @@
  
 
 <section class="post-meta">
-  <div class="post-date">May 9, 2020</div>
+  <div class="post-date">August 9, 2020</div>
   <div class="post-categories">
   in 
     
-    <a href="/category/non-tech">Non-tech</a>
+    <a href="/category/deploy-nodejs-application-on-a-raspberrypi">Deploy-nodejs-application-on-a-raspberrypi</a>
     
   
   </div>
 </section>
 
 <article class="post-content">
-  <p>I was alone…</p>
+  <p>Sub post of <a href="deploy-nodejs-and-mongodb-application-in-raspberrypi">Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi</a></p>
 
-<p>When I was just looking at all the other kids who were playing cricket, I was alone…</p>
+<hr />
 
-<p>When they form a gang and fight together, I was alone…</p>
+<p><b>Prev:</b> <a href="/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html">Install Ububtu 20.04 Server on a Raspberry Pi 4</a></p>
 
-<p>When the whole class laughed at me on my mistakes when my teacher asked me to read a paragraph in the textbook, I was alone…</p>
+<p><b>Next:</b> <a href="/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html">Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose</a></p>
 
-<p>When I bunked my school without letting my mother know, I was alone…</p>
+<hr />
 
-<p>When I stole money to go to a picnic organized by the school, I was alone…</p>
+<p>In this post, We will install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</p>
 
-<p>When I was beaten in front of the whole class by the principal who suspected me as thief though I was innocent, I was alone…</p>
+<ul>
+  <li>
+    <h5 id="install-docker">Install Docker</h5>
 
-<p>When I created a fake report card and could not let the truth out, I was alone…</p>
+    <p><code class="language-plaintext highlighter-rouge">curl -sSL https://get.docker.com | sh</code></p>
+  </li>
+  <li>
+    <h5 id="add-permission-to-docker">Add permission to docker</h5>
 
-<p>When my aunt told her daughter not to talk/play with me because I am a bad boy, I was alone…</p>
+    <p>This will help to run docker commands without using sudo</p>
 
-<p>When I do all these things without liking them, I was alone…</p>
+    <p><code class="language-plaintext highlighter-rouge">sudo usermod -aG docker pi</code></p>
 
-<p>When there is no one who can understand what I am going through, I was alone…</p>
+    <p>Note: You need to reboot to run docker without sudo</p>
+  </li>
+  <li>
+    <h5 id="install-the-dependencies-for-docker-compose">Install the dependencies for docker-compose</h5>
 
-<p>Finally, When I fail, I was alone…</p>
+    <p><code class="language-plaintext highlighter-rouge">sudo apt-get install libffi-dev libssl-dev</code></p>
 
-<p><br />
-<br />              <br />
-<br />
-<br /></p>
+    <p><code class="language-plaintext highlighter-rouge">sudo apt-get install python3 python3-pip</code></p>
+  </li>
+  <li>
+    <h5 id="install-docker-compose">Install docker compose</h5>
 
-<p>But there is one change, one day, one moment, one small hope…….</p>
+    <p><code class="language-plaintext highlighter-rouge">sudo pip3 install docker-compose</code></p>
 
-<p>All I need was a small bit of self-confidence which has turned everything.</p>
+    <p>Docker compose installation takes time. If you want to see the feedback then you can run the command with <code class="language-plaintext highlighter-rouge">-v</code> (verbose mode)</p>
+  </li>
+  <li>
+    <h5 id="testing-docker-and-docker-compose">Testing docker and docker-compose</h5>
 
-<p>Now, I am not alone…</p>
+    <p><code class="language-plaintext highlighter-rouge">docker -v</code> or you can pull a sample image and run it</p>
+
+    <p><code class="language-plaintext highlighter-rouge">docker-commpose -v</code></p>
+  </li>
+</ul>
 
 </article>
 
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/school">school</a>,&nbsp;<a href="/tag/childhood">childhood</a>
+  <strong>Tags:</strong> <a href="/tag/tech">tech</a>,&nbsp;<a href="/tag/raspberrypi">raspberrypi</a>,&nbsp;<a href="/tag/ubuntu">ubuntu</a>,&nbsp;<a href="/tag/docker">docker</a>
 </section>
 
 
@@ -209,7 +224,7 @@
   
     
     
-      <a href="//twitter.com/share?text=I+was+alone...&url=http%3A%2F%2Flocalhost%3A4000%2Fnon-tech%2F2020%2F05%2F09%2Fi-am-alone.html&via=Mahesh Kumar Kolla"
+      <a href="//twitter.com/share?text=Install+Docker+and+Docker+Compose+on+a+RaspberryPi+running+Ubuntu+20.04&url=http%3A%2F%2Flocalhost%3A4000%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-docker-and-docker-compose-on-ubuntu-raspberrypi.html&via=Mahesh Kumar Kolla"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -224,7 +239,7 @@
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=I+was+alone...&u=http%3A%2F%2Flocalhost%3A4000%2Fnon-tech%2F2020%2F05%2F09%2Fi-am-alone.html"
+      <a href="//www.facebook.com/sharer.php?t=Install+Docker+and+Docker+Compose+on+a+RaspberryPi+running+Ubuntu+20.04&u=http%3A%2F%2Flocalhost%3A4000%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-docker-and-docker-compose-on-ubuntu-raspberrypi.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -240,7 +255,7 @@
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnon-tech%2F2020%2F05%2F09%2Fi-am-alone.html"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-docker-and-docker-compose-on-ubuntu-raspberrypi.html"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -567,8 +582,8 @@ $(document).ready(function() {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-134133627-1', 'auto');
   ga('send', 'pageview', {
-    'page': '/non-tech/2020/05/09/i-am-alone.html',
-    'title': 'I was alone...'
+    'page': '/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html',
+    'title': 'Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04'
   });
 </script>
 

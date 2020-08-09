@@ -82,59 +82,33 @@
           
         
           
-          <li class="nav-link"><a href="/tag/thoughtworks/">thoughtworks</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/step/">step</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/tech/">tech</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/nodejs/">nodejs</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/typescript/">typescript</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/javascript/">javascript</a>
+        
           
         
           
-          <li class="nav-link"><a href="/tag/school/">school</a>
-          
         
           
-          <li class="nav-link"><a href="/tag/childhood/">childhood</a>
-          
         
-          
-          <li class="nav-link"><a href="/tag/raspberrypi/">raspberrypi</a>
-          
-        
-          
-          <li class="nav-link"><a href="/tag/mongodb/">mongodb</a>
-          
-        
-          
-          <li class="nav-link"><a href="/tag/ubuntu/">ubuntu</a>
-          
-        
-          
-          <li class="nav-link"><a href="/category/non-tech/">non-tech</a>
-          
-        
-          
-          <li class="nav-link"><a href="/category/nodejs-project-setup/">nodejs-project-setup</a>
-          
-        
-          
-          <li class="nav-link"><a href="/category/deploy-nodejs-application-on-a-raspberrypi/">deploy-nodejs-application-on-a-raspberrypi</a>
           
         
           
@@ -193,6 +167,11 @@ You cannot even use mongo docker image latest versions (https://hub.docker.com/_
 Hence, the first thing to do it change the OS in RaspberryPi. I have decided to use Ubuntu Server. (Optionally you can install the desktop in it)</p>
 
 <h4 id="step-1-install-ubuntu-server-on-a-raspberrypi-4">STEP-1: <a href="install-ububtu-server-on-a-raspberrypi">Install Ubuntu Server on a RaspberryPi 4</a></h4>
+
+<h4 id="step-2-install-docker-and-docker-compose-on-a-raspberrypi-running-ubuntu-server">STEP-2: <a href="install-docker-and-docker-compose-on-ubuntu-raspberrypi">Install Docker and Docker Compose on a RaspberryPi running Ubuntu server</a></h4>
+
+<h4 id="step-3-run-nodejs-and-mongodb-application-on-raspberrypi">STEP-3: <a href="run-nodejs-mongo-application-on-rasberrypi">Run NodeJS and Mongodb application on RaspberryPi</a></h4>
+
 
 </article>
 
@@ -287,13 +266,14 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 
     <h3 class="footer-heading">Mahesh Kumar Kolla</h3>
 
+		<div>
+		<p><strong>Site Map</strong></p>
     <div class="site-navigation">
-
-      <p><strong>Site Map</strong></p>
+			<p><h5>Pages</h5></p>
       <ul class="pages">
         
         
-          <li class="nav-link"><a href="/about/">About</a>
+					<li class="nav-link tag-link"><a href="/about/">About</a> | </li>
         
         
         
@@ -303,63 +283,37 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
         
         
         
-          <li class="nav-link"><a href="/posts/">Posts</a>
+					<li class="nav-link tag-link"><a href="/posts/">Posts</a> | </li>
         
         
         
-          <li class="nav-link"><a href="/tag/thoughtworks/">thoughtworks</a>
         
         
         
-          <li class="nav-link"><a href="/tag/step/">step</a>
         
         
         
-          <li class="nav-link"><a href="/tag/tech/">tech</a>
         
         
         
-          <li class="nav-link"><a href="/tag/nodejs/">nodejs</a>
         
         
         
-          <li class="nav-link"><a href="/tag/typescript/">typescript</a>
         
         
         
-          <li class="nav-link"><a href="/tag/javascript/">javascript</a>
         
         
         
-          <li class="nav-link"><a href="/tag/school/">school</a>
         
         
         
-          <li class="nav-link"><a href="/tag/childhood/">childhood</a>
         
         
         
-          <li class="nav-link"><a href="/tag/raspberrypi/">raspberrypi</a>
         
         
         
-          <li class="nav-link"><a href="/tag/mongodb/">mongodb</a>
-        
-        
-        
-          <li class="nav-link"><a href="/tag/ubuntu/">ubuntu</a>
-        
-        
-        
-          <li class="nav-link"><a href="/category/non-tech/">non-tech</a>
-        
-        
-        
-          <li class="nav-link"><a href="/category/nodejs-project-setup/">nodejs-project-setup</a>
-        
-        
-        
-          <li class="nav-link"><a href="/category/deploy-nodejs-application-on-a-raspberrypi/">deploy-nodejs-application-on-a-raspberrypi</a>
         
         
         
@@ -370,6 +324,143 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
         
       </ul>
     </div>
+		
+		<div class="site-navigation">
+			<p><h5>Categories</h5></p>
+			<ul class="pages">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+				<li class="nav-link tag-link"><a href="/category/non-tech/">non-tech</a> | </li>
+				
+        
+        
+				<li class="nav-link tag-link"><a href="/category/nodejs-project-setup/">nodejs-project-setup</a> | </li>
+				
+        
+        
+				<li class="nav-link tag-link"><a href="/category/deploy-nodejs-application-on-a-raspberrypi/">deploy-nodejs-application-on-a-raspberrypi</a> | </li>
+				
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+		<div class="site-navigation">
+			<p><h5>Tags</h5></p>
+			<ul class="pages">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/thoughtworks/">thoughtworks</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/step/">step</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/tech/">tech</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/nodejs/">nodejs</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/typescript/">typescript</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/javascript/">javascript</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/school/">school</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/childhood/">childhood</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/raspberrypi/">raspberrypi</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/mongodb/">mongodb</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/ubuntu/">ubuntu</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/docker/">docker</a> | </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+		</div>
 
     <div class="site-contact">
 
