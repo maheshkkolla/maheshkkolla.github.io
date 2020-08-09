@@ -10,7 +10,7 @@ exclude:
 
 # Site settings
 title: Mahesh Kumar Kolla
-subtitle: "Application developer at ThoughtWorks"
+subtitle: "Senior Consultant at ThoughtWorks"
 email: mahesh.mk.245@gmail.com
 name: Mahesh Kumar Kolla
 description: >
@@ -52,6 +52,8 @@ descriptions:
     desc: "All non technical posts"
   - cat: nodejs-project-setup
     desc: "The series of tutorials that help to setup production-grade Nodejs API project"
+  - cat: deploy-nodejs-application-on-a-raspberrypi
+    desc: "The series of tutorials that help to deploy nodejs 12 and mongodb 4 in RaspberryPI"
 
 # Social icons and sharing options
 #
