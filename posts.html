@@ -13,7 +13,8 @@ permalink: /posts/
     {% endif %}
   {% endfor %}
   <ul class="posts-list">
-  {% for post in site.categories[cat] %}
+	{% assign sortedPosts = site.categories[cat] | sort: 'placement' %}
+  {% for post in sortedPosts %}
     <li>
       <strong>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

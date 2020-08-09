@@ -71,3 +71,5 @@ Let's go through the process of installing Ubuntu 20.04, Connect to WiFi, SSH in
      Hence, you can run `startx` to start the desktop.
      
 Boom..... That's all. You have a RaspberryPi running Ubuntu 64 bit OS in it.              
+
+{% include prev-next-nav.html %}
