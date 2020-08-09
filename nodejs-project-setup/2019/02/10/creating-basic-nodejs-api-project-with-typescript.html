@@ -171,25 +171,25 @@
 <p>In this tutorial, We are going to setup a basic express app with typescript.</p>
 
 <ul>
-  <li>Run <code class="highlighter-rouge">npm init</code> in the project directory and follow the instructions - package.json file would be created.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">npm init</code> in the project directory and follow the instructions - package.json file would be created.</li>
 </ul>
 
 <p>package.json file contains metadata, dependencies and scripts of the project.</p>
 <ul>
-  <li>Install express using <code class="highlighter-rouge">npm install express --save</code> command</li>
+  <li>Install express using <code class="language-plaintext highlighter-rouge">npm install express --save</code> command</li>
 </ul>
 
-<p>When we specify <code class="highlighter-rouge">--save</code>, the dependency will be saved in package.json</p>
+<p>When we specify <code class="language-plaintext highlighter-rouge">--save</code>, the dependency will be saved in package.json</p>
 <ul>
-  <li>Install typescript using <code class="highlighter-rouge">npm install typescript @types/node --save-dev</code> command</li>
+  <li>Install typescript using <code class="language-plaintext highlighter-rouge">npm install typescript @types/node --save-dev</code> command</li>
 </ul>
 
-<p>When we specify <code class="highlighter-rouge">--save-dev</code>, the dependency will be saved under dev dependencies which are required only for development purpose.</p>
+<p>When we specify <code class="language-plaintext highlighter-rouge">--save-dev</code>, the dependency will be saved under dev dependencies which are required only for development purpose.</p>
 <ul>
   <li>Configuring the typescript.</li>
 </ul>
 
-<p>When running the typescript <code class="highlighter-rouge">tsc</code> command, it searches for configuration file <code class="highlighter-rouge">tsconfig.json</code>. Add the following</p>
+<p>When running the typescript <code class="language-plaintext highlighter-rouge">tsc</code> command, it searches for configuration file <code class="language-plaintext highlighter-rouge">tsconfig.json</code>. Add the following</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> 
   </span><span class="p">{</span><span class="w">
@@ -206,14 +206,14 @@
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span></code></pre></figure>
 
-<p>Here, we are specifying typescript to compile all <code class="highlighter-rouge">.ts</code> files present in src and place the generated output in dist.
+<p>Here, we are specifying typescript to compile all <code class="language-plaintext highlighter-rouge">.ts</code> files present in src and place the generated output in dist.
 Also we have specified the target js version as es6(compatible with latest nodejs versions) given module as commonjs which is used in node.
 Read <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json</a> to know about these option.</p>
 
 <p>Now, it is time for us to create the express server</p>
 
 <ul>
-  <li>Create <code class="highlighter-rouge">app.ts</code> and <code class="highlighter-rouge">server.ts</code> files under <code class="highlighter-rouge">src</code> directory</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">app.ts</code> and <code class="language-plaintext highlighter-rouge">server.ts</code> files under <code class="language-plaintext highlighter-rouge">src</code> directory</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"> 
@@ -229,7 +229,7 @@ Read <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">t
 
 <p>Above, we did two things.
 One, We have created an get end point that responds with “Hello”.
-Second, We have used <code class="highlighter-rouge">body-parser</code> middleware which extracts the body of the request stream and exposes it as json on <code class="highlighter-rouge">req.body</code>.</p>
+Second, We have used <code class="language-plaintext highlighter-rouge">body-parser</code> middleware which extracts the body of the request stream and exposes it as json on <code class="language-plaintext highlighter-rouge">req.body</code>.</p>
 
 <figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"> 
   <span class="c1">// server.ts</span>
@@ -253,24 +253,24 @@ Second, We have used <code class="highlighter-rouge">body-parser</code> middlewa
 <p>This will allow us to build and run the app.</p>
 
 <ul>
-  <li>Run <code class="highlighter-rouge">npm run build</code> and then <code class="highlighter-rouge">npm start</code></li>
-  <li>Check the app in browser using URL <code class="highlighter-rouge">localhost:3000/hello</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">npm run build</code> and then <code class="language-plaintext highlighter-rouge">npm start</code></li>
+  <li>Check the app in browser using URL <code class="language-plaintext highlighter-rouge">localhost:3000/hello</code></li>
 </ul>
 
 <p>We need to build and start the server on evey small change of the code. It’s kinda takes off focus on development. So, let us create some tools to make this process easy</p>
 
 <ul>
-  <li>Run <code class="highlighter-rouge">npm install nodemon ts-node --save-dev</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">npm install nodemon ts-node --save-dev</code></li>
 </ul>
 
 <p>Nodemon helps us to restart the app automatically when any changes detected in the code.
 ts-node is for executing the typescript code without compiling it to javascript.</p>
 
 <ul>
-  <li>Add one more script to package.json. <code class="highlighter-rouge">"dev": "nodemon --exec 'ts-node' ./src/server.ts"</code></li>
+  <li>Add one more script to package.json. <code class="language-plaintext highlighter-rouge">"dev": "nodemon --exec 'ts-node' ./src/server.ts"</code></li>
 </ul>
 
-<p>Now, we can run <code class="highlighter-rouge">npm run dev</code> to start the server in development environment instead of building and running.</p>
+<p>Now, we can run <code class="language-plaintext highlighter-rouge">npm run dev</code> to start the server in development environment instead of building and running.</p>
 
 <p>We have a basic nodejs app up and running.
 In the next tutorial, We will be structuring the app by creating controllers, services, models etc.,</p>
