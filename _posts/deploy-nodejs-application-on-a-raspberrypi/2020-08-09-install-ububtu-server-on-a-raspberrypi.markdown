@@ -4,7 +4,8 @@ title:  "Install Ububtu 20.04 Server on a Raspberry Pi 4"
 date:   2020-08-09
 author: Mahesh Kumar Kolla
 categories: deploy-nodejs-application-on-a-raspberrypi
-tags:	tech raspberrypi ubuntu  
+tags:	tech raspberrypi ubuntu
+placement: 2  
 ---
 
 Sub post of [Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi](deploy-nodejs-and-mongodb-application-in-raspberrypi)

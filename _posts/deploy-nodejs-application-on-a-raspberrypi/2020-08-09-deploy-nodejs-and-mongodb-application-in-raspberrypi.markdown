@@ -4,7 +4,8 @@ title:  "Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi"
 date:   2020-08-09
 author: Mahesh Kumar Kolla
 categories: deploy-nodejs-application-on-a-raspberrypi
-tags:	tech nodejs raspberrypi mongodb 
+tags:	tech nodejs raspberrypi mongodb
+placement: 1 
 ---
 
 
