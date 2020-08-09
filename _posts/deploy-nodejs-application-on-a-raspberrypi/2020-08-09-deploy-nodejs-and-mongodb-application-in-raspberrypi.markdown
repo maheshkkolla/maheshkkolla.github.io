@@ -20,4 +20,4 @@ You cannot even use mongo docker image latest versions (https://hub.docker.com/_
 Hence, the first thing to do it change the OS in RaspberryPi. I have decided to use Ubuntu Server. (Optionally you can install the desktop in it)
 
 
-#### STEP-1: [Install Ubuntu Server in RaspberryPi 4](install-ububtu-server-in-raspberrypi)       
+#### STEP-1: [Install Ubuntu Server on a RaspberryPi 4](install-ububtu-server-on-a-raspberrypi)       
