@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 16:26:15 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 16:26:15 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 17:44:16 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 17:44:16 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -104,6 +104,13 @@ Hence, did not explore that path.&lt;/p&gt;
     &lt;p&gt;Now, You have your NodeJS and MongoDB application running on a RaspberryPi&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Prev:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html&quot;&gt;Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</link>
@@ -207,6 +214,13 @@ Hence, did not explore that path.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Boom….. That’s all. You have a RaspberryPi running Ubuntu 64 bit OS in it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Next:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html&quot;&gt;Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</link>
@@ -274,6 +288,15 @@ Hence, did not explore that path.&lt;/p&gt;
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-commpose -v&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;b&gt;Prev:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html&quot;&gt;Install Ububtu 20.04 Server on a Raspberry Pi 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Next:&lt;/b&gt; &lt;a href=&quot;/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html&quot;&gt;Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</link>
