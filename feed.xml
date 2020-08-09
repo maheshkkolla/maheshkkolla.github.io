@@ -5,9 +5,136 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 11:09:00 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 11:09:00 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 13:01:16 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 13:01:16 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Install Ububtu 20.04 Server on a Raspberry Pi 4</title>
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s go through the process of installing Ubuntu 20.04, Connect to WiFi, SSH into it and Install desktop (optionally) in this post.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;we-need-to-have-an-imager-to-create-the-bootable-sd-card&quot;&gt;We need to have an imager to create the bootable SD Card.&lt;/h5&gt;
+
+    &lt;p&gt;Download and install the respective imager from &lt;a href=&quot;http://downloads.raspberrypi.org/imager/&quot;&gt;here&lt;/a&gt; (MacOS, Windows, Linux)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;making-bootable-sd-card&quot;&gt;Making bootable SD Card&lt;/h5&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Insert the SD Card to the computer/laptop&lt;/li&gt;
+      &lt;li&gt;Open the imager, You see 3 steps like Choose OS, Choose SD Card, Write&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Select “Choose OS” -&amp;gt; “Ubuntu” -&amp;gt; “Ubuntu 20.04 LTS (Pi 3/4)”&lt;/p&gt;
+
+        &lt;p&gt;Note: Make sure you are selecting the 64 bit OS for arm64 architectures&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Choose the SD card to write&lt;/li&gt;
+      &lt;li&gt;Click on “Write”. It will take some time to write into the SD Card&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;connecting-to-wifi&quot;&gt;Connecting to Wifi&lt;/h5&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Remove and insert the SD again to the computer/laptop&lt;/li&gt;
+      &lt;li&gt;Open the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system-boot&lt;/code&gt; drive&lt;/li&gt;
+      &lt;li&gt;Edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;network-config&lt;/code&gt; file with your WiFi configuration&lt;/li&gt;
+      &lt;li&gt;Uncomment the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wifis&lt;/code&gt; block in the file and add your WiFi credentials
+        &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;na&quot;&gt;wifis&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;wlan0&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;dhcp4&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;access-points&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;WiFi&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;name&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;WiFi&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;password&amp;gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;Note: Include quotes if there are spaces in the name or password.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Save the file and Eject the SD Card from the computer/laptop.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;booting-the-pi-and-ssh&quot;&gt;Booting the Pi and SSH&lt;/h5&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Just insert the SD card into the Pi and connect it to the power.&lt;/li&gt;
+      &lt;li&gt;It takes around a minute to boot the Pi with the Ubuntu you just installed&lt;/li&gt;
+      &lt;li&gt;Find out the IP Address of the Pi&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;Pi's IP address&amp;gt;&lt;/code&gt; Example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;192.168.0.5&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Confirm the connection by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yes&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt; is the default password for user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;It will ask to change the password on the first time login&lt;/li&gt;
+      &lt;li&gt;Login again with the changed password&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;optional-install-desktop&quot;&gt;Optional: Install desktop&lt;/h4&gt;
+
+    &lt;p&gt;If you want the desktop then, You can install any light weight desktop of your wish.
+  I have installed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kubuntu-desktop&lt;/code&gt; which is fine but not great.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt update&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt upgrade&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install kubuntu-desktop&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo reboot&lt;/code&gt; to reboot the pi and start the desktop&lt;/li&gt;
+      &lt;li&gt;Ideally, You new desktop should come up automatically. But in some cases it does not.
+   Hence, you can run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startx&lt;/code&gt; to start the desktop.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Boom….. That’s all. You have a RaspberryPi running Ubuntu 64 bit OS in it.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</guid>
+        
+        <category>tech</category>
+        
+        <category>raspberrypi</category>
+        
+        <category>ubuntu</category>
+        
+        
+        <category>deploy-nodejs-application-on-a-raspberrypi</category>
+        
+      </item>
+    
+      <item>
+        <title>Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi</title>
+        <description>&lt;p&gt;I was excited to buy a RaspberryPi 4 to setup a small own personal server. 
+I always wanted to write tools/utils by my own and deploy it on my personal server.
+But It turned out to be a stress full thing to deploy my NodeJS 12 and Mongodb 4.4 (anything about 3) on the RaspberryPi 4.
+Hence, I have decided to write it down.&lt;/p&gt;
+
+&lt;p&gt;RaspberryPi comes with Raspbian OS installed with it. It is 32 bit OS (Raspbian 64 bit beta is released) and the hardware is arm64 bit architecture.
+These are main reasons for me it took long to setup and deploy.
+Mongodb does not support 32 bit arm64 architecture in it’s latest versions. You can install very old versions in RaspberryPi (Raspbian 32 bit).
+You cannot even use mongo docker image latest versions (https://hub.docker.com/_/mongo) in 32 bit OS. 
+Hence, the first thing to do it change the OS in RaspberryPi. I have decided to use Ubuntu Server. (Optionally you can install the desktop in it)&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1-install-ubuntu-server-in-raspberrypi-4&quot;&gt;STEP-1: &lt;a href=&quot;install-ububtu-server-in-raspberrypi&quot;&gt;Install Ubuntu Server in RaspberryPi 4&lt;/a&gt;&lt;/h4&gt;
+</description>
+        <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-in-raspberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-in-raspberrypi.html</guid>
+        
+        <category>tech</category>
+        
+        <category>nodejs</category>
+        
+        <category>raspberrypi</category>
+        
+        <category>mongodb</category>
+        
+        
+        <category>deploy-nodejs-application-on-a-raspberrypi</category>
+        
+      </item>
     
       <item>
         <title>I was alone...</title>
