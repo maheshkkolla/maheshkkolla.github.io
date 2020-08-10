@@ -10,7 +10,7 @@ prevPost: install-ububtu-server-on-a-raspberrypi
 nextPost: run-nodejs-mongo-application-on-rasberrypi
 ---
 
-Sub post of [Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi](deploy-nodejs-and-mongodb-application-in-raspberrypi)
+Sub post of [Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi](deploy-nodejs-and-mongodb-application-on-a-raspberrypi)
 
 {% include prev-next-nav.html %}
 
