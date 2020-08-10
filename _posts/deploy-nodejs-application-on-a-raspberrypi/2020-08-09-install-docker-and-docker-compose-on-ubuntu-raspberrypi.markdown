@@ -21,7 +21,7 @@ In this post, We will install Docker and Docker Compose on a RaspberryPi running
   
   `curl -sSL https://get.docker.com | sh`
 
-- ##### Add permission to docker 
+- ##### Change permissions 
 
   This will help to run docker commands without using sudo
 
@@ -41,7 +41,7 @@ In this post, We will install Docker and Docker Compose on a RaspberryPi running
   
   Docker compose installation takes time. If you want to see the feedback then you can run the command with `-v` (verbose mode)   
 
-- ##### Testing docker and docker-compose
+- ##### Test docker and docker-compose
 
   `docker -v` or you can pull a sample image and run it 
 
