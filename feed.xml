@@ -5,13 +5,13 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 17:44:16 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 17:44:16 +0530</lastBuildDate>
+    <pubDate>Mon, 10 Aug 2020 10:48:31 +0530</pubDate>
+    <lastBuildDate>Mon, 10 Aug 2020 10:48:31 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose</title>
-        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-on-a-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -131,7 +131,7 @@ Hence, did not explore that path.&lt;/p&gt;
     
       <item>
         <title>Install Ububtu 20.04 Server on a Raspberry Pi 4</title>
-        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-on-a-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -239,7 +239,7 @@ Hence, did not explore that path.&lt;/p&gt;
     
       <item>
         <title>Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</title>
-        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-in-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Sub post of &lt;a href=&quot;deploy-nodejs-and-mongodb-application-on-a-raspberrypi&quot;&gt;Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -316,7 +316,7 @@ Hence, did not explore that path.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Deploy Nodejs 12 and Mongodb 4.4 application in RaspberryPi</title>
+        <title>Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi</title>
         <description>&lt;p&gt;I was excited to buy a RaspberryPi 4 to setup a small own personal server. 
 I always wanted to write tools/utils by my own and deploy it on my personal server.
 But It turned out to be a stress full thing to deploy my NodeJS 12 and Mongodb 4.4 (anything about 3) on the RaspberryPi 4.
@@ -336,8 +336,8 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-in-raspberrypi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-in-raspberrypi.html</guid>
+        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</link>
+        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</guid>
         
         <category>tech</category>
         
