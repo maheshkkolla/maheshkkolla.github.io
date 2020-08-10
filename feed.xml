@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Aug 2020 10:48:31 +0530</pubDate>
-    <lastBuildDate>Mon, 10 Aug 2020 10:48:31 +0530</lastBuildDate>
+    <pubDate>Mon, 10 Aug 2020 10:51:36 +0530</pubDate>
+    <lastBuildDate>Mon, 10 Aug 2020 10:51:36 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -258,7 +258,7 @@ Hence, did not explore that path.&lt;/p&gt;
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl -sSL https://get.docker.com | sh&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h5 id=&quot;add-permission-to-docker&quot;&gt;Add permission to docker&lt;/h5&gt;
+    &lt;h5 id=&quot;change-permissions&quot;&gt;Change permissions&lt;/h5&gt;
 
     &lt;p&gt;This will help to run docker commands without using sudo&lt;/p&gt;
 
@@ -281,7 +281,7 @@ Hence, did not explore that path.&lt;/p&gt;
     &lt;p&gt;Docker compose installation takes time. If you want to see the feedback then you can run the command with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v&lt;/code&gt; (verbose mode)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h5 id=&quot;testing-docker-and-docker-compose&quot;&gt;Testing docker and docker-compose&lt;/h5&gt;
+    &lt;h5 id=&quot;test-docker-and-docker-compose&quot;&gt;Test docker and docker-compose&lt;/h5&gt;
 
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker -v&lt;/code&gt; or you can pull a sample image and run it&lt;/p&gt;
 
