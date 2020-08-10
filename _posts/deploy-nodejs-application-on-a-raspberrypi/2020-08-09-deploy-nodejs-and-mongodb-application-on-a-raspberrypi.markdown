@@ -11,7 +11,7 @@ placement: 1
 
 I was excited to buy a RaspberryPi 4 to setup a small own personal server. 
 I always wanted to write tools/utils by my own and deploy it on my personal server.
-But It turned out to be a stress full thing to deploy my NodeJS 12 and Mongodb 4.4 (anything about 3) on the RaspberryPi 4.
+But It turned out to be a stress full thing to deploy my NodeJS 12 and Mongodb 4.4 (anything above 3) on the RaspberryPi 4.
 Hence, I have decided to write it down. 
 
 RaspberryPi comes with Raspbian OS installed with it. It is 32 bit OS (Raspbian 64 bit beta is released) and the hardware is arm64 bit architecture.
