@@ -30,7 +30,7 @@ We have create a new bucket, copy the content and delete the old bucket.
     }
   ```
   
-  Run this command to remove the above resource from the terraform state.
+  Run the following command to remove the above resource from the terraform state.
   This will make terraform to stop tracking this bucket though the resource is present. 
   We will be adding again with the new bucket created.
   
@@ -58,4 +58,4 @@ We have create a new bucket, copy the content and delete the old bucket.
 
 - #### Delete old bucket 
   
-    Verify if all the content is present in the new bucket and delete the old bucket from the AWS Console.     
+    Verify if all the contents are present in the new bucket and delete the old bucket from the AWS Console.     
