@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Aug 2020 19:10:09 +0530</pubDate>
-    <lastBuildDate>Sat, 15 Aug 2020 19:10:09 +0530</lastBuildDate>
+    <pubDate>Sat, 15 Aug 2020 19:16:30 +0530</pubDate>
+    <lastBuildDate>Sat, 15 Aug 2020 19:16:30 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -37,7 +37,7 @@ We have create a new bucket, copy the content and delete the old bucket.&lt;/p&g
   }
 &lt;/code&gt;&lt;/pre&gt;
 
-    &lt;p&gt;Run this command to remove the above resource from the terraform state.
+    &lt;p&gt;Run the following command to remove the above resource from the terraform state.
 This will make terraform to stop tracking this bucket though the resource is present. 
 We will be adding again with the new bucket created.&lt;/p&gt;
 
@@ -68,7 +68,7 @@ We will be adding again with the new bucket created.&lt;/p&gt;
   &lt;li&gt;
     &lt;h4 id=&quot;delete-old-bucket&quot;&gt;Delete old bucket&lt;/h4&gt;
 
-    &lt;p&gt;Verify if all the content is present in the new bucket and delete the old bucket from the AWS Console.&lt;/p&gt;
+    &lt;p&gt;Verify if all the contents are present in the new bucket and delete the old bucket from the AWS Console.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
