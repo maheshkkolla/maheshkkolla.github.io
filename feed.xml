@@ -5,9 +5,87 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Aug 2020 10:59:13 +0530</pubDate>
-    <lastBuildDate>Mon, 10 Aug 2020 10:59:13 +0530</lastBuildDate>
+    <pubDate>Sat, 15 Aug 2020 19:10:09 +0530</pubDate>
+    <lastBuildDate>Sat, 15 Aug 2020 19:10:09 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Rename AWS S3 bucket in terraform</title>
+        <description>&lt;p&gt;There is no direct way to rename a S3 bucket from console or from terraform.
+We have create a new bucket, copy the content and delete the old bucket.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;create-a-new-bucket&quot;&gt;Create a new bucket&lt;/h4&gt;
+
+    &lt;p&gt;Go to AWS console and create the new bucket manually by copying the bucket settings from old bucket&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;sync-the-buckets&quot;&gt;Sync the buckets&lt;/h4&gt;
+
+    &lt;p&gt;Run this command to sync the contents of the old bucket to the new bucket&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aws s3 sync s3://old-bucket s3://new-bucket&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;remove-the-s3-bucket-from-the-terraform-state&quot;&gt;Remove the S3 bucket from the terraform state&lt;/h4&gt;
+
+    &lt;p&gt;Assuming this is your terraform code to create S3 bucket&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-hcl-terraform&quot;&gt;  resource &quot;aws_s3_bucket&quot; &quot;demo_bucket&quot; {
+    bucket = &quot;old-bucket&quot;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;Run this command to remove the above resource from the terraform state.
+This will make terraform to stop tracking this bucket though the resource is present. 
+We will be adding again with the new bucket created.&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;terraform state rm aws_s3_bucket.demo_bucket&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;change-the-bucket-name-in-terraform-code&quot;&gt;Change the bucket name in terraform code&lt;/h4&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-hcl-terraform&quot;&gt;  resource &quot;aws_s3_bucket&quot; &quot;demo_bucket&quot; {
+    bucket = &quot;new-bucket&quot;  // Change from old-bucket to new-bucket
+  }
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;import-new-bucket-to-the-terraform-state&quot;&gt;Import new bucket to the terraform state&lt;/h4&gt;
+
+    &lt;p&gt;Provide the terraform resource and the bucket name&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;terraform import aws_s3_bucket.demo_bucket new-bucket&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;This will allow terraform state to track the new bucket and reflect the changes if any&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;terraform-apply&quot;&gt;Terraform apply&lt;/h4&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;terraform apply&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;delete-old-bucket&quot;&gt;Delete old bucket&lt;/h4&gt;
+
+    &lt;p&gt;Verify if all the content is present in the new bucket and delete the old bucket from the AWS Console.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 15 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/tech/2020/08/15/rename-s3-bucket-in-terraform.html</link>
+        <guid isPermaLink="true">http://localhost:4000/tech/2020/08/15/rename-s3-bucket-in-terraform.html</guid>
+        
+        <category>aws</category>
+        
+        <category>s3</category>
+        
+        <category>terraform</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>Run Nodejs and Mongo application on RaspberryPi running Ubuntu 20.04 using Docker and Docker Compose</title>

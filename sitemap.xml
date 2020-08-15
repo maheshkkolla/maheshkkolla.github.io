@@ -33,6 +33,10 @@
 <lastmod>2020-08-09T00:00:00+05:30</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/tech/2020/08/15/rename-s3-bucket-in-terraform.html</loc>
+<lastmod>2020-08-15T00:00:00+05:30</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -78,6 +82,15 @@
 <loc>http://localhost:4000/tag/docker/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/tag/aws/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/s3/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/terraform/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/category/non-tech/</loc>
 </url>
 <url>
@@ -85,6 +98,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/category/deploy-nodejs-application-on-a-raspberrypi/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/tech/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
