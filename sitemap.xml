@@ -37,6 +37,10 @@
 <lastmod>2020-08-15T00:00:00+05:30</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/non-tech/2020/10/25/bargaining.html</loc>
+<lastmod>2020-10-25T00:00:00+05:30</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -70,6 +74,9 @@
 <loc>http://localhost:4000/tag/childhood/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/tag/mythoughts/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/tag/raspberrypi/</loc>
 </url>
 <url>
@@ -89,6 +96,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/tag/terraform/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/life/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/category/non-tech/</loc>
