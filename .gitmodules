@@ -1,0 +1,4 @@
+[submodule "_site"]
+	path = _site
+	url = git@github.com:maheshkkolla/maheshkkolla.github.io.git
+	branch = master
