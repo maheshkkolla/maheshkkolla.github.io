@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "క్రిమి తెచ్చిన కష్టాలు"
-date:   2020-05-09
+date:   2021-05-04
 author: Mahesh Kumar Kolla
 categories: non-tech
 tags: mythoughts corona
