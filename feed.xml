@@ -3,11 +3,11 @@
   <channel>
     <title>Mahesh Kumar Kolla</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Oct 2020 22:16:03 +0530</pubDate>
-    <lastBuildDate>Sun, 25 Oct 2020 22:16:03 +0530</lastBuildDate>
-    <generator>Jekyll v3.9.0</generator>
+    <link>http://maheshkkolla.github.io/</link>
+    <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 04 May 2021 13:30:42 +0530</pubDate>
+    <lastBuildDate>Tue, 04 May 2021 13:30:42 +0530</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Bargaining?</title>
@@ -30,8 +30,8 @@ People who have money, spend everything they want without any issues or bargaini
 
 </description>
         <pubDate>Sun, 25 Oct 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/non-tech/2020/10/25/bargaining.html</link>
-        <guid isPermaLink="true">http://localhost:4000/non-tech/2020/10/25/bargaining.html</guid>
+        <link>http://maheshkkolla.github.io/non-tech/2020/10/25/bargaining.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2020/10/25/bargaining.html</guid>
         
         <category>mythoughts</category>
         
@@ -106,8 +106,8 @@ We will be adding again with the new bucket created.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 15 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/tech/2020/08/15/rename-s3-bucket-in-terraform.html</link>
-        <guid isPermaLink="true">http://localhost:4000/tech/2020/08/15/rename-s3-bucket-in-terraform.html</guid>
+        <link>http://maheshkkolla.github.io/tech/2020/08/15/rename-s3-bucket-in-terraform.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/tech/2020/08/15/rename-s3-bucket-in-terraform.html</guid>
         
         <category>aws</category>
         
@@ -224,8 +224,8 @@ Hence, did not explore that path.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</guid>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/run-nodejs-mongo-application-on-rasberrypi.html</guid>
         
         <category>tech</category>
         
@@ -301,7 +301,7 @@ Hence, did not explore that path.&lt;/p&gt;
       &lt;li&gt;Just insert the SD card into the Pi and connect it to the power.&lt;/li&gt;
       &lt;li&gt;It takes around a minute to boot the Pi with the Ubuntu you just installed&lt;/li&gt;
       &lt;li&gt;Find out the IP Address of the Pi&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;Pi's IP address&amp;gt;&lt;/code&gt; Example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;192.168.0.5&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;Pi&apos;s IP address&amp;gt;&lt;/code&gt; Example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh ubuntu@&amp;lt;192.168.0.5&amp;gt;&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;Confirm the connection by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yes&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt; is the default password for user &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;It will ask to change the password on the first time login&lt;/li&gt;
@@ -334,8 +334,8 @@ Hence, did not explore that path.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</guid>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html</guid>
         
         <category>tech</category>
         
@@ -410,8 +410,8 @@ Hence, did not explore that path.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</guid>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html</guid>
         
         <category>tech</category>
         
@@ -447,8 +447,8 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 
 </description>
         <pubDate>Sun, 09 Aug 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</link>
-        <guid isPermaLink="true">http://localhost:4000/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</guid>
+        <link>http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/deploy-nodejs-and-mongodb-application-on-a-raspberrypi.html</guid>
         
         <category>tech</category>
         
@@ -460,6 +460,38 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
         
         
         <category>deploy-nodejs-application-on-a-raspberrypi</category>
+        
+      </item>
+    
+      <item>
+        <title>క్రిమి తెచ్చిన కష్టాలు</title>
+        <description>&lt;pre&gt;
+ఔషదాలు వందలు 
+ప్రాణ వాయువు పదివేలు 
+సూది మందులు లక్షలు 
+ఠికాలు అసలు దొరకనే లేవు  
+
+క్రిమి తెచ్చింది ఈ కష్టాలు 
+చెమటలు పట్టిస్తున్న చావు భయాలు 
+బ్రతకడానికి మన పరుగులు 
+ఇంకెంతకాలం ఈ అవస్థలు  
+
+ఇకనైనా తెరుద్దాం మన కళ్ళు 
+తెలుసుకుందాం మన భాద్యతలు 
+మారుద్దాం మన జీవన విధానాలు 
+వచ్చేస్తున్నాయి మంచి రోజులు 
+&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 09 May 2020 00:00:00 +0530</pubDate>
+        <link>http://maheshkkolla.github.io/non-tech/2020/05/09/corona.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2020/05/09/corona.html</guid>
+        
+        <category>mythoughts</category>
+        
+        <category>corona</category>
+        
+        
+        <category>non-tech</category>
         
       </item>
     
@@ -501,8 +533,8 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 &lt;p&gt;Now, I am not alone…&lt;/p&gt;
 </description>
         <pubDate>Sat, 09 May 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/non-tech/2020/05/09/i-am-alone.html</link>
-        <guid isPermaLink="true">http://localhost:4000/non-tech/2020/05/09/i-am-alone.html</guid>
+        <link>http://maheshkkolla.github.io/non-tech/2020/05/09/i-am-alone.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2020/05/09/i-am-alone.html</guid>
         
         <category>school</category>
         
@@ -554,8 +586,8 @@ Hence, the first thing to do it change the OS in RaspberryPi. I have decided to 
 
 </description>
         <pubDate>Mon, 11 Jul 2016 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
-        <guid isPermaLink="true">http://localhost:4000/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
+        <link>http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</link>
+        <guid isPermaLink="true">http://maheshkkolla.github.io/non-tech/2016/07/11/the-biggest-change-in-my-life.html</guid>
         
         <category>thoughtworks</category>
         
