@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Install Ububtu 20.04 Server on a Raspberry Pi 4</title>
+  <meta name="description" content="Sub post of Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi">
+  
+  <meta name="author" content="Mahesh Kumar Kolla">
+  <meta name="copyright" content="&copy; Mahesh Kumar Kolla 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://maheshkkolla.github.io/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html">
+  <link rel="alternate" type="application/rss+xml" title="Mahesh Kumar Kolla" href="http://maheshkkolla.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span>Mahesh Kumar Kolla</span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Install Ububtu 20.04 Server on a Raspberry Pi 4</h1>
+      <p class="info">by <strong>Mahesh Kumar Kolla</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">August 9, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/deploy-nodejs-application-on-a-raspberrypi">Deploy-nodejs-application-on-a-raspberrypi</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>Sub post of <a href="deploy-nodejs-and-mongodb-application-on-a-raspberrypi">Deploy Nodejs 12 and Mongodb 4.4 application on a RaspberryPi</a></p>
+
+<hr />
+
+<p><b>Next:</b> <a href="/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html">Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</a></p>
+
+<hr />
+
+<p>Let’s go through the process of installing Ubuntu 20.04, Connect to WiFi, SSH into it and Install desktop (optionally) in this post.</p>
+
+<ul>
+  <li>
+    <h5 id="we-need-to-have-an-imager-to-create-the-bootable-sd-card">We need to have an imager to create the bootable SD Card.</h5>
+
+    <p>Download and install the respective imager from <a href="http://downloads.raspberrypi.org/imager/">here</a> (MacOS, Windows, Linux)</p>
+  </li>
+  <li>
+    <h5 id="making-bootable-sd-card">Making bootable SD Card</h5>
+
+    <ul>
+      <li>Insert the SD Card to the computer/laptop</li>
+      <li>Open the imager, You see 3 steps like Choose OS, Choose SD Card, Write</li>
+      <li>
+        <p>Select “Choose OS” -&gt; “Ubuntu” -&gt; “Ubuntu 20.04 LTS (Pi 3/4)”</p>
+
+        <p>Note: Make sure you are selecting the 64 bit OS for arm64 architectures</p>
+      </li>
+      <li>Choose the SD card to write</li>
+      <li>Click on “Write”. It will take some time to write into the SD Card</li>
+    </ul>
+  </li>
+  <li>
+    <h5 id="connecting-to-wifi">Connecting to Wifi</h5>
+
+    <ul>
+      <li>Remove and insert the SD again to the computer/laptop</li>
+      <li>Open the <code class="language-plaintext highlighter-rouge">system-boot</code> drive</li>
+      <li>Edit the <code class="language-plaintext highlighter-rouge">network-config</code> file with your WiFi configuration</li>
+      <li>Uncomment the <code class="language-plaintext highlighter-rouge">wifis</code> block in the file and add your WiFi credentials
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="na">wifis</span><span class="pi">:</span>
+        <span class="na">wlan0</span><span class="pi">:</span>
+        <span class="na">dhcp4</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">optional</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">access-points</span><span class="pi">:</span>
+          <span class="s2">"</span><span class="s">&lt;WiFi</span><span class="nv"> </span><span class="s">name&gt;"</span><span class="pi">:</span>
+            <span class="na">password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;WiFi</span><span class="nv"> </span><span class="s">password&gt;"</span>
+</code></pre></div>        </div>
+        <p>Note: Include quotes if there are spaces in the name or password.</p>
+      </li>
+      <li>Save the file and Eject the SD Card from the computer/laptop.</li>
+    </ul>
+  </li>
+  <li>
+    <h5 id="booting-the-pi-and-ssh">Booting the Pi and SSH</h5>
+
+    <ul>
+      <li>Just insert the SD card into the Pi and connect it to the power.</li>
+      <li>It takes around a minute to boot the Pi with the Ubuntu you just installed</li>
+      <li>Find out the IP Address of the Pi</li>
+      <li><code class="language-plaintext highlighter-rouge">ssh ubuntu@&lt;Pi's IP address&gt;</code> Example: <code class="language-plaintext highlighter-rouge">ssh ubuntu@&lt;192.168.0.5&gt;</code></li>
+      <li>Confirm the connection by typing <code class="language-plaintext highlighter-rouge">yes</code></li>
+      <li><code class="language-plaintext highlighter-rouge">ubuntu</code> is the default password for user <code class="language-plaintext highlighter-rouge">ubuntu</code></li>
+      <li>It will ask to change the password on the first time login</li>
+      <li>Login again with the changed password</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="optional-install-desktop">Optional: Install desktop</h4>
+
+    <p>If you want the desktop then, You can install any light weight desktop of your wish.
+  I have installed <code class="language-plaintext highlighter-rouge">kubuntu-desktop</code> which is fine but not great.</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt update</code> and <code class="language-plaintext highlighter-rouge">sudo apt upgrade</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install kubuntu-desktop</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo reboot</code> to reboot the pi and start the desktop</li>
+      <li>Ideally, You new desktop should come up automatically. But in some cases it does not.
+   Hence, you can run <code class="language-plaintext highlighter-rouge">startx</code> to start the desktop.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Boom….. That’s all. You have a RaspberryPi running Ubuntu 64 bit OS in it.</p>
+
+<hr />
+
+<p><b>Next:</b> <a href="/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-docker-and-docker-compose-on-ubuntu-raspberrypi.html">Install Docker and Docker Compose on a RaspberryPi running Ubuntu 20.04</a></p>
+
+<hr />
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/tech">tech</a>,&nbsp;<a href="/tag/raspberrypi">raspberrypi</a>,&nbsp;<a href="/tag/ubuntu">ubuntu</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Install+Ububtu+20.04+Server+on+a+Raspberry+Pi+4&url=http%3A%2F%2Fmaheshkkolla.github.io%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-ububtu-server-on-a-raspberrypi.html&via=Mahesh Kumar Kolla"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Install+Ububtu+20.04+Server+on+a+Raspberry+Pi+4&u=http%3A%2F%2Fmaheshkkolla.github.io%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-ububtu-server-on-a-raspberrypi.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fmaheshkkolla.github.io%2Fdeploy-nodejs-application-on-a-raspberrypi%2F2020%2F08%2F09%2Finstall-ububtu-server-on-a-raspberrypi.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'maheshkkolla';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Mahesh Kumar Kolla</h3>
+
+		<div>
+		<p><strong>Site Map</strong></p>
+    <div class="site-navigation">
+			<p><h5>Pages</h5></p>
+      <ul class="pages">
+        
+        
+					<li class="nav-link tag-link"><a href="/about/">About</a> | </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/posts/">Posts</a> | </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+		
+		<div class="site-navigation">
+			<p><h5>Categories</h5></p>
+			<ul class="pages">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+				<li class="nav-link tag-link"><a href="/category/non-tech/">non-tech</a> | </li>
+				
+        
+        
+				<li class="nav-link tag-link"><a href="/category/deploy-nodejs-application-on-a-raspberrypi/">deploy-nodejs-application-on-a-raspberrypi</a> | </li>
+				
+        
+        
+				<li class="nav-link tag-link"><a href="/category/tech/">tech</a> | </li>
+				
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+		<div class="site-navigation">
+			<p><h5>Tags</h5></p>
+			<ul class="pages">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/thoughtworks/">thoughtworks</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/step/">step</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/school/">school</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/childhood/">childhood</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/mythoughts/">mythoughts</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/tech/">tech</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/nodejs/">nodejs</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/raspberrypi/">raspberrypi</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/mongodb/">mongodb</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/ubuntu/">ubuntu</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/docker/">docker</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/aws/">aws</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/s3/">s3</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/terraform/">terraform</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/life/">life</a> | </li>
+        
+        
+        
+					<li class="nav-link tag-link"><a href="/tag/corona/">corona</a> | </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+		</div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:mahesh.mk.245@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">mahesh.mk.245@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/maheshkkolla" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">Mahesh Kumar Kolla</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.facebook.com/maheshkkolla" title="Facebook">
+              <i class="fa fa-facebook"></i>
+              <span class="username">Mahesh Kumar Kolla</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/in/mahesh-kumar-kolla-75501113b/" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Mahesh Kumar Kolla</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-134133627-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/deploy-nodejs-application-on-a-raspberrypi/2020/08/09/install-ububtu-server-on-a-raspberrypi.html',
+    'title': 'Install Ububtu 20.04 Server on a Raspberry Pi 4'
+  });
+</script>
+
+
+
+  </body>
+
+</html>
