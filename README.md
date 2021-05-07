@@ -8,5 +8,5 @@
   
   To start locally
   
-  This is actually create category and tags archives. 
+  This is actually creating category and tag archives. 
   Build is not doing it. 
