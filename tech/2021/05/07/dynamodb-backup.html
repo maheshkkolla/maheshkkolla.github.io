@@ -221,15 +221,13 @@ Exporting feature does not consume provisioned read capacity of the table, as a 
 <h4 id="automating-the-backups-on-specific-intervals">Automating the backups on specific intervals</h4>
 <ul>
   <li>Create a lambda</li>
-  <li>
-    <p>Write code to “Export to S3” using aws-sdk
+  <li>Write code to “Export to S3” using aws-sdk
 Example code in JS (using aws-sdk version 3).
- <code class="language-plaintext highlighter-rouge">ecmascript 6
-    const result = await dynamoDB.exportTableToPointInTime({ 
-        TableArn: "&lt;&gt;", 
-        S3Bucket: "&lt;&gt;" 
-    });
-</code></p>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">dynamoDB</span><span class="p">.</span><span class="nx">exportTableToPointInTime</span><span class="p">({</span> 
+        <span class="na">TableArn</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;&gt;</span><span class="dl">"</span><span class="p">,</span> 
+        <span class="na">S3Bucket</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;&gt;</span><span class="dl">"</span> 
+    <span class="p">});</span> 
+</code></pre></div>    </div>
   </li>
   <li>Schedule the lambda run using CloudWatch event rules (using schedule cron or rate expressions)</li>
 </ul>

@@ -5,8 +5,8 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 May 2021 22:49:54 +0530</pubDate>
-    <lastBuildDate>Fri, 07 May 2021 22:49:54 +0530</lastBuildDate>
+    <pubDate>Fri, 07 May 2021 23:01:44 +0530</pubDate>
+    <lastBuildDate>Fri, 07 May 2021 23:01:44 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -65,15 +65,13 @@ Exporting feature does not consume provisioned read capacity of the table, as a 
 &lt;h4 id=&quot;automating-the-backups-on-specific-intervals&quot;&gt;Automating the backups on specific intervals&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Create a lambda&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Write code to “Export to S3” using aws-sdk
+  &lt;li&gt;Write code to “Export to S3” using aws-sdk
 Example code in JS (using aws-sdk version 3).
- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ecmascript 6
-    const result = await dynamoDB.exportTableToPointInTime({ 
-        TableArn: &quot;&amp;lt;&amp;gt;&quot;, 
-        S3Bucket: &quot;&amp;lt;&amp;gt;&quot; 
-    });
-&lt;/code&gt;&lt;/p&gt;
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dynamoDB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exportTableToPointInTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;TableArn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+        &lt;span class=&quot;na&quot;&gt;S3Bucket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;Schedule the lambda run using CloudWatch event rules (using schedule cron or rate expressions)&lt;/li&gt;
 &lt;/ul&gt;
