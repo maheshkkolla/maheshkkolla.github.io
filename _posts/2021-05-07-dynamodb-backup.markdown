@@ -60,7 +60,7 @@ There are 2 ways to do the cross account backup
 - Create a lambda 
 - Write code to "Export to S3" using aws-sdk
   Example code in JS (using aws-sdk version 3). 
-   ```ecmascript 6
+   ```javascript
       const result = await dynamoDB.exportTableToPointInTime({ 
           TableArn: "<>", 
           S3Bucket: "<>" 
@@ -85,7 +85,7 @@ We can use traditional Data Pipelines to restore or Create a script
 
 
  
-# What is the Cost of backup?
+# What is the Cost of these backups?
 
 This is not a table scan solution, no extra infra/server. 
 So, the cost of this solution is less comparing with Data Pipelines solution.
