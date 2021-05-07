@@ -5,8 +5,8 @@
     <description></description>
     <link>http://maheshkkolla.github.io/</link>
     <atom:link href="http://maheshkkolla.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 May 2021 23:01:44 +0530</pubDate>
-    <lastBuildDate>Fri, 07 May 2021 23:01:44 +0530</lastBuildDate>
+    <pubDate>Fri, 07 May 2021 23:03:50 +0530</pubDate>
+    <lastBuildDate>Fri, 07 May 2021 23:03:50 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -90,7 +90,7 @@ But for now, we have to manually read the data from S3 objects and insert into t
   &lt;li&gt;Insert these objects into the table using sdk.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;what-is-the-cost-of-backup&quot;&gt;What is the Cost of backup?&lt;/h1&gt;
+&lt;h1 id=&quot;what-is-the-cost-of-these-backups&quot;&gt;What is the Cost of these backups?&lt;/h1&gt;
 
 &lt;p&gt;This is not a table scan solution, no extra infra/server. 
 So, the cost of this solution is less comparing with Data Pipelines solution.&lt;/p&gt;
